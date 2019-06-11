@@ -4,26 +4,27 @@
 <form action="#" method="POST">
     @method('PUT')
     @csrf
+    <h2>Modificar Institución</h2>
     <table>
         <tr>
             <td>Nombre Institucional:</td>
             <td>
-            <input type="text" name="nombrei" id="nombrei" value="{{$instituciones->nombrei}}">
+                <input type="text" name="nombrei" id="nombrei" value="{{$instituciones->nombrei}}">
             </td>
         </tr>
         <tr>
-                <td>Usuario:</td>
-                <td>
-                    <input type="text" name="usuarioi" id="usuarioi" value="{{$instituciones->usuarioi}}">
-                </td>
+            <td>Usuario:</td>
+            <td>
+                <input type="text" name="usuarioi" id="usuarioi" value="{{$instituciones->usuarioi}}">
+            </td>
         </tr>
         <tr>
+            <td>Contraseña:</td>
             <td>
-                Contraseña:
+                <input type="password" name="contraseña" id="contraseña" value="">
             </td>
-            <td><input type="password" name="contraseña" id="contraseña" value=""></td>
             <td>
-                Confirmacion de Contraseña:
+                Confirmar Contraseña:
             </td>
             <td>
                 <input type="password" name="validacion" id="validacion" >
@@ -38,7 +39,7 @@
         <tr>
             <td>Dirección Institucional:</td>
             <td>
-            <input type="text" name="direccion" id="direccion" value="{{$instituciones->direccion}}">
+                <input type="text" name="direccion" id="direccion" value="{{$instituciones->direccion}}">
             </td>
         </tr>
         <tr>

@@ -1,27 +1,49 @@
 @extends('../base')
-@section('title')Anuncios @endsection
-@section('usuario') <label for="" class="FONT-FAMILY-AWESOME"></label> Institucion @endsection
-@section('home')
-{{route('instituciones')}}
+@section('title')
+    Anuncios
 @endsection
-@section('url1'){{route('examen.index')}} @endsection
-@section('cont1') <i class="fas fa-book-open"></i> Examenes @endsection
-@section('url2'){{route('anuncio.index')}} @endsection
-@section('cont2') <i class="fas fa-bullhorn"></i> Anuncios @endsection
-@section('url3'){{route('oferta.index')}} @endsection
-@section('cont3')<i class="fas fa-book"></i> Ofertas @endsection
+@section('usuario')
+    <label for="" class="FONT-FAMILY-AWESOME"></label>
+    Institucion
+@endsection
+@section('home')
+    {{route('instituciones')}}
+@endsection
+@section('url1')
+    {{route('examen.index')}}
+@endsection
+@section('cont1')
+    <i class="fas fa-book-open"></i>
+    Examenes
+@endsection
+@section('url2')
+    {{route('anuncio.index')}}
+@endsection
+@section('cont2')
+    <i class="fas fa-bullhorn"></i>
+    Anuncios
+@endsection
+@section('url3')
+    {{route('oferta.index')}}
+@endsection
+@section('cont3')
+    <i class="fas fa-book"></i>
+    Ofertas
+@endsection
 @section('Contenido')
-<br>
-<section>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
-                <i class="fas fa-plus"></i> 
-                Crear Anuncio
-            </button>
+    <br>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+        <i class="fas fa-plus"></i>
+        Crear Anuncio
+    </button>
+    <p>
+    <br>
+    <section>
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
                                     Crear Anuncio
                             </h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -32,26 +54,26 @@
                                 <form action="{{route('anuncio.store')}}" method="POST" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     <table class="table">
-                                        <tr> 
+                                        <tr>
                                             <td><label for="">Fecha de Anuncio:</label></td>
                                             <td >
                                                 <input type="date" name="fecha" id="fecha" class="form-text" required style="border-radius: 5px; background-color:C4CFC9;">
                                             </td>
-                                            
+
                                         </tr>
-                                        
+
                                         <tr>
                                             <td><label for="">Imagen:</label></td>
                                             <td>
                                                 <div>
                                                     <label for="" class="btn btn-success"><i class="fas fa-folder-open"></i><input type="file" name="imagen" value="" id="imagen" required class="" content="" style="border-radius: 5px; "></label>
-                                                    
-                                                </div>                    
+
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td><label for="" class="form-check-label">Descipcion:</label></td>
-                                            <td ><textarea class="" cols="60" rows="10" name="descripcion" id="descripcion" style="border-radius:5%;" required></textarea></td>     
+                                            <td ><textarea class="" cols="60" rows="10" name="descripcion" id="descripcion" style="border-radius:5%;" required></textarea></td>
                                         </tr>
                                         <tr>
                                             <td style="position: relative; left: 80%">
@@ -59,7 +81,7 @@
                                             </td>
                                         </tr>
                                     </table>
-                                </form>   
+                                </form>
                         </div>
                     </div>
                 </div>
@@ -86,11 +108,11 @@
                     <td colspan="autofocus">{{$anuncio->descripcion}}</td>
                     <td class="text-center">@if ($anuncio->estado==1) Activo @else Inactivo @endif</td>
                     @php
-                      $id=$anuncio->idanuncio;  
+                      $id=$anuncio->idanuncio;
                     @endphp
-                    
+
                 <td class="text-center"><a href="{{url('anuncio/'.$id.'/edit')}}"><i class="fas fa-edit btn btn-secondary"></i></a></td>
-                    
+
                     <td>   @if ($anuncio->estado==1)
                             <form action="{{route('anuncio.estado',$id)}}" method="POST">
                                @csrf
@@ -98,13 +120,13 @@
                            </form>
                        @else
                            <form action="{{route('anuncio.estado',$id)}}" method="POST">
-            
+
                                @csrf
                                <button type="submit" class="btn btn-success "><i class="far fa-eye"></i></button>
                            </form>
                        @endif
                     </td>
-                       
+
                 </tr>
                 @endforeach
         </tbody>
