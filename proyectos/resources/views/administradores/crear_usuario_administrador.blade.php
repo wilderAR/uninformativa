@@ -27,7 +27,7 @@
     {{route('institucion.index')}}
 @endsection
 @section('cont3')
-    <i class="fas fa-school"></i>
+    <i class="fas fa-school"></i>&nbsp;
     Instituciones
 @endsection
 @section('Contenido')
@@ -38,7 +38,7 @@
                 <div class="card" style="width: 30rem;display:block; margin: auto;">
                     <h2 class="card-title text text-center">Crear Usuario</h2>
                     <div class="card-body">
-                        <form action="#" method="POST">
+                    <form action="{{url('usuarios')}}" method="POST">
                             {{@csrf_field()}}
                             <table class="table">
                                 <tr>

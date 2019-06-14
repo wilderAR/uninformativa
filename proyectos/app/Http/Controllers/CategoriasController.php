@@ -5,7 +5,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PHPUnit\Framework\Exception;
 use App\categorias;
-use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class CategoriasController extends Controller
 {
@@ -17,10 +16,9 @@ class CategoriasController extends Controller
     public function index()
     {
         $categorias=DB::table('categoria')
-        ->join('usuario','usuario.idusuario','=','categoria.idusuario')
-        ->select('categoria.idcategoria','usuario.usuario','categoria.nombrec','categoria.descripcion','categoria.estado')
+        ->select('categoria.idcategoria','categoria.nombrec','categoria.descripcion','categoria.estado')
         ->get();
-        return view('administradores.categorias_administrador',['categorias'=>$categorias]);
+        return view('administradores.categorias_administrador',['categoria'=>$categorias]);
     }
 
 
@@ -42,17 +40,12 @@ class CategoriasController extends Controller
      */
     public function store(Request $request)
     {   
-       $fields= request()->validate([
-               //se agregan los campos requeridos del formulario
-               //'nombrec' => 'required', 
-        ]);
-        // $categorias = new categoria;
-        // // $categorias->idusuario = 1;
-        // $categorias->nombrec =strtoupper($request->nombre);
-        // $categorias->estado = 1;
-        // $categorias->save();
-        // return redirect('categoria');
-        Project::create( $fields);
+        $categorias = new categorias;
+        $categorias->nombrec =$request->nombre;
+        $categorias->descripcion= $request->descripcion;
+        $categorias->estado = 1;
+        $categorias->save();
+        return redirect('categoria');
     }
 
     /**
@@ -63,12 +56,12 @@ class CategoriasController extends Controller
      */
     public function edit($id)
     {
-        $categorias=categoria::find($id);   
+        $categorias=categorias::find($id);   
         return view('administradores.modificar_categoria_administrador',['categorias'=>$categorias]);
     }
 
      public function disable($id){
-       $categorias=categoria::find($id);
+       $categorias=categorias::find($id);
        if($categorias->estado==1){
           $categorias->estado=2;
           $categorias->save();
@@ -88,8 +81,9 @@ class CategoriasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $categorias=categoria::find($id);
-        $categorias->nombrec=strtoupper($request->nombrec);
+        $categorias=categorias::find($id);
+        $categorias->nombrec=$request->nombrec;
+        $categorias->descripcion=$request->descripcion; 
         $categorias->save();
         return redirect('categoria');
     }

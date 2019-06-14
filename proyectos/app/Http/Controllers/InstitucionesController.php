@@ -38,7 +38,7 @@ class InstitucionesController extends Controller
     public function store(Request $request)
     {
         try {
-            $instituciones=new usuario;
+            $instituciones=new usuarios;
             $instituciones->usuario = $request ->usuario;
             $instituciones->tipo_usuario = 2;
             $instituciones->contraseña =bcrypt($request->password);
@@ -66,13 +66,13 @@ class InstitucionesController extends Controller
      */
     public function edit($id)
     {
-       $instituciones=institucion::find($id);
+       $instituciones=usuarios::find($id);
        return view('administradores.modificar_institucion_administrador',['instituciones'=> $instituciones]);
     }
 
      public function registro($id, Request $request){
-           $instituciones= institucion::find($id);
-           $instituciones->nombrei =strtoupper($request->nombrei);
+           $instituciones= instituciones::find($id);
+           $instituciones->nombrei =$request->nombrei;
            $instituciones->pagina =  $request->pagina;
            $instituciones->direccion = $request->direccion;
         //    $instituciones->idinstitucion = ;
@@ -86,19 +86,9 @@ class InstitucionesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        $instituciones=institucion::find($id);
-        $instituciones->nombrei= strtoupper($request->nombrei);
-        $instituciones->pagina = $request->pagina;
-        $instituciones->contraseña = encrypt($request->contraseña);
-        $instituciones->direccion = $request->direccion;
-        $instituciones->save();
-        return redirect('institucion');
-    }
 
     public function disable($id){
-        $instituciones=usuario::find($id);
+        $instituciones=usuarios::find($id);
         if ($instituciones->estado==1) {
             $instituciones->estado=2;
             $instituciones->save();

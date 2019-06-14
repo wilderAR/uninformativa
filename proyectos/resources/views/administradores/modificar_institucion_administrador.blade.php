@@ -13,22 +13,7 @@
             </td>
         </tr>
         <tr>
-            <td>Usuario:</td>
-            <td>
-                <input type="text" name="usuarioi" id="usuarioi" value="{{$instituciones->usuarioi}}">
-            </td>
-        </tr>
-        <tr>
-            <td>Contraseña:</td>
-            <td>
-                <input type="password" name="contraseña" id="contraseña" value="">
-            </td>
-            <td>
-                Confirmar Contraseña:
-            </td>
-            <td>
-                <input type="password" name="validacion" id="validacion" >
-            </td>
+        
         </tr>
         <tr>
             <td>Pagina Principal:</td>

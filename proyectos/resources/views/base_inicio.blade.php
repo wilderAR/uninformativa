@@ -19,7 +19,7 @@
                         <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>Cerrar sesion
                         </button>
                       </nav>
-                      <ul class="navbar-nav ml-auto">
+                      {{-- <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -48,7 +48,7 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                        @endguest --}}
                 </div>
               </div>
               <div class="container">

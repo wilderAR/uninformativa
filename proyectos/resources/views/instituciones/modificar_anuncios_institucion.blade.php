@@ -1,5 +1,5 @@
 @extends('../base')
-@section('title') Examenes @endsection
+@section('title') Anuncios @endsection
 @section('usuario') <label for="" class="FONT-FAMILY-AWESOME"></label> Institucion @endsection
 @section('home')
 {{route('instituciones')}}

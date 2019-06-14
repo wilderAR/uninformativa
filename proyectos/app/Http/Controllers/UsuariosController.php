@@ -41,7 +41,7 @@ class UsuariosController extends Controller
     public function store(Request $request)
     {
     try {
-        $usuarios = new usuario;
+        $usuarios = new usuarios;
         $usuarios->tipo_usuario=3; 
         $usuarios ->usuario = $request->usuario;
         $usuarios ->contraseña = $request->contraseña;
@@ -54,7 +54,7 @@ class UsuariosController extends Controller
         $message="Fallo al registrar al cliente";
         $status="alert-danger";
         };
-        return redirect('usuario')->with('status',$status)->with('message',$message);
+        return redirect('usuarios')->with('status',$status)->with('message',$message);
 
     } catch (Exception $e) {
         return "Fatal Error -".$e->getMessage();
@@ -80,7 +80,7 @@ class UsuariosController extends Controller
         $tipo_usuario=DB::table('tipo_usuario')
         ->select('tipo_usuario.nombret','tipo_usuario.idtipo')
         ->get();     
-        $usuarios=usuario::find($idusuario);
+        $usuarios=usuarios::find($idusuario);
         return view('administradores.modificar_usuario_administrador',['tipo_usuario'=>$tipo_usuario],['usuarios'=>$usuarios]);    
     }
 
@@ -93,24 +93,24 @@ class UsuariosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $usuarios=usuario::find($id);
+        $usuarios=usuarios::find($id);
         $usuarios->tipo_usuario=$request->tipo;
         $usuarios->usuario=$request->usuario;
         $usuarios->contraseña=$request->contraseña;
         $usuarios->save();
-        return redirect('administrador');
+        return redirect('usuarios');
     }
     
     public function disable($id){
-        $usuarios=usuario::find($id);
+        $usuarios=usuarios::find($id);
         if ($usuarios->estado==1) {
             $usuarios->estado=2;
             $usuarios->save();
-            return redirect('usuario');
+            return redirect('usuarios');
         }else{
             $usuarios->estado=1;
             $usuarios->save();
-            return redirect('usuario');
+            return redirect('usuarios');
         }
     }
 }

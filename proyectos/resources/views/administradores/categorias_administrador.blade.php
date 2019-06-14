@@ -27,15 +27,54 @@
     {{route('institucion.index')}}
 @endsection
 @section('cont3')
-    <i class="fas fa-school"></i>
+    <i class="fas fa-school"></i>&nbsp;
     Instituciones
 @endsection
 @section('Contenido')
     <br>
-    <a href="{{route('categoria.create')}}" class="btn btn-dark btn-lg">
-        <i class="fas fa-plus"></i>
-        Crear Categoria
-    </a>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+            <i class="fas fa-plus"></i>
+            Crear Categoria
+        </button>
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                            Crear Categoria
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <form action="{{url('categoria')}}" method="POST">
+                                    {{csrf_field() }}
+                                    <table class="table">
+                                        <tr>
+                                            <td><label for="">Nombre:</label>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="nombre" id="nombre" class="form-control-lg" required>
+                                                <br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="">Descripcion</label></td>
+                                            <td><textarea  cols="30" rows="10" id="descripcion" name="descripcion" required></textarea></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="submit" value="Crear Categoria" class="btn btn-success" name="btn_crear_categoria" id="btn_crear_categoria">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                    </div>
+                </div>
+            </div>
+          </div>
     <p>
     <br>
     <section>
@@ -51,31 +90,31 @@
                     </tr>
             </thead>
             <tbody>
-                @foreach ($categorias as $categoria)
+                @foreach ($categoria as $categorias)
                 <tr>
-                    <td class="text-center">{{$categoria->idcategoria}}</td>
-                    <td class="text-center">{{$categoria->nombrec}}</td>
-                    <td class="text-center" colspan="autofocus">{{$categoria->descripcion}}</td>
+                    <td class="text-center">{{$categorias->idcategoria}}</td>
+                    <td class="text-center">{{$categorias->nombrec}}</td>
+                    <td class="text-center" colspan="autofocus">{{$categorias->descripcion}}</td>
                     <td class="text-center">
-                        @if($categoria->estado==1)
+                        @if($categorias->estado==1)
                             Activo
                         @else
                             Desactivado
                         @endif
                     </td>
-                    <td class="text-center"> @php $id=$categoria->idcategoria; @endphp
-                        <a href="#" class="btn btn-success">Modificar</a>
+                    <td class="text-center"> @php $id=$categorias->idcategoria; @endphp
+                        <a href="{{url('categoria/'.$id.'/edit')}}"><i class="fas fa-edit btn btn-secondary"></i></a>
                     </td>
                     <td class="text-center">
-                        @if ($categoria->estado==1)
-                            <form action="{{route('oferta.estado',$id)}}" method="POST">
+                        @if ($categorias->estado==1)
+                            <form action="{{route('categoria.estado',$id)}}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-danger ">
                                     <i class="fas fa-eye-slash"></i>
                                 </button>
                             </form>
                         @else
-                            <form action="{{route('oferta.estado',$id)}}" method="POST">
+                            <form action="{{route('categoria.estado',$id)}}" method="POST">
                                 @csrf
                                 <button type="submit" class="btn btn-success ">
                                     <i class="far fa-eye"></i>

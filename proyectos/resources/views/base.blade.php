@@ -17,7 +17,7 @@
 </head>
 <body>
     <style>
-        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+       
         .row.content {
           background-color: #f1f8e9;
           height: 1500px
@@ -26,14 +26,10 @@
 
         }
 
-        /* Set gray background color and 100% height */
         .sidenav {
           background-color: #212121;
           height: 100%;
         }
-
-        /* Set black background color, white text and some padding */
-        /* On small screens, set height to 'auto' for sidenav and grid */
         @media screen and (max-width: 767px) {
           .sidenav {
             height: auto;
@@ -48,7 +44,6 @@
             <div class="col-sm-12">
                 <nav class="navbar navbar-dark bg-dark">
                     <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
-
                 {{-- <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>{{auth->user()->usuario}} --}}
                     </button>
                   </nav>
@@ -88,7 +83,7 @@
                     </li>
                     <li class="sidebar-item" style="width: 10vw;">
                       <a href="@yield('url4')" class="sidebar-link waves-effect waves-dark sidebar-link">
-                        @yield('cont4')
+                         @yield('cont4')
                       </a>
                     </li>
                     <li class="sidebar-item" style="width: 10vw;">
