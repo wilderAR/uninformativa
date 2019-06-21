@@ -24,7 +24,7 @@
     {{route('institucion.index')}}
 @endsection
 @section('opcion3')
-    Instuciones
+    Instituciones
 @endsection
 @section('img3')
     {!! asset('imagenes/instituciones.jpg') !!}

@@ -26,7 +26,8 @@
     {{route('institucion.index')}}
 @endsection
 @section('cont3')
-    <i class="fas fa-school"></i> &nbsp;    
+    <i class="fas fa-school"></i> 
+    &nbsp;    
     Instituciones
 @endsection
 @section('Contenido')
@@ -39,63 +40,71 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">
-                                Crear Usuario
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
+                    <h2 class="modal-title" style="position: relative; left: 40%">
+                        <label for="">Crear Usuario</label>
+                    </h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     <form action="{{url('usuarios')}}" method="POST">
                         {{csrf_field()}}
-                            <table class="table">
-                                <tr>
-                                    <td>Usuario:</td>
-                                    <td>
-                                        <input type="text" name="usuario" id="usuario" class="form-control" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Contraseña:</td>
-                                    <td>
-                                        <input type="password" name="contraseña" id="contraseña" class="form-control" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Confirmar Contraseña:</td>
-                                    <td>
-                                        <input type="password"  name="password" id="password" class="form-control" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Correo:</td>
-                                    <td>
-                                        <input type="text" name="correo" id="correo" class="form-control" required>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="submit" value="Crear Institucion" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-success">
-                                    </td>
-                                </tr>
-                            </table>
-                        </form>     
-                    </div>
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <label for="">Usuario:</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="usuario" id="usuario" class="form-control" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Contraseña:</label>
+                                </td>
+                                <td>
+                                    <input type="password" name="contraseña" id="contraseña" class="form-control" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Confirmar Contraseña:</label>
+                                </td>
+                                <td>
+                                    <input type="password"  name="password" id="password" class="form-control" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="">Correo:</label>
+                                </td>
+                                <td>
+                                    <input type="text" name="correo" id="correo" class="form-control" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="position: relative; left: 80%">
+                                    <input type="submit" value="Crear Usuario" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-success">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>     
                 </div>
             </div>
-          </div>
+        </div>
+    </div>
     <p>
     <br>
     <section>
-        <table class="table  table-bordered">
+        <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center">#</th>
                     <th class="text-center">Usuario</th>
-                    <th class="text-center">correo</th>
+                    <th class="text-center">Correo</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Vision</th>
+                    <th class="text-center">Visión</th>
                 </tr>
             </thead>
             <tbody>
@@ -112,8 +121,8 @@
                         @endif
                     </td>
                     @php
-                    $id=$usuario->idusuario;
-                @endphp
+                        $id=$usuario->idusuario;
+                    @endphp
                     <td class="text-center">
                         @if ($usuario->estado==1)
                             <form action="{{route('usuario.estado',$id)}}" method="POST">

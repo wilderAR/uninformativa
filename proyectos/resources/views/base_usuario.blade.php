@@ -37,7 +37,7 @@
 </head>
 <body>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col">
             <nav class="navbar navbar-dark bg-dark">
                 <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
                 {{-- <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>{{auth->user()->usuario}} 
@@ -47,39 +47,7 @@
     </div>
     <div class="container-fluid">
         <div class="row content">
-            <div class="col-sm-2 sidenav" >
-                <nav class="sidebar-nav" style="position: relative; top: 2%">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item text-black">
-                            <h2 class="text-light">@yield('usuario')</h2>
-                        </li>
-                        <li class="sidebar-item" style="width: 10vw;">
-                            <a href="@yield('home')" class="sidebar-link waves-effect waves-dark sidebar-link">
-                                <i class="fas fa-home"></i>
-                                Inicio
-                            </a>
-                        </li>
-                        <li class="sidebar-item" style="width: 10vw;">
-                            <a href="@yield('url1')" class="sidebar-link waves-effect waves-dark sidebar-link">
-                                @yield('cont1')
-                            </a>
-                        </li>
-                        <li class="sidebar-item" style="width: 10vw;">
-                            <a href="@yield('url2')" class="sidebar-link waves-effect waves-dark sidebar-link">
-                                @yield('cont2')
-                            </a>
-                        </li>
-                        <li class="sidebar-item" style="width: 10vw;">
-                            <a href="@yield('url3')" class="sidebar-link waves-effect waves-dark sidebar-link">
-                                @yield('cont3')
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-sm-10">
-                @yield('Contenido')
-            </div>
+            @yield('Contenido')
         </div>
     </div>
     <footer class="">

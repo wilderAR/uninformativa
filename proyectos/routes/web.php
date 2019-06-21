@@ -28,3 +28,6 @@
 
 
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/buscar', function () {
+        return view('usuarios.buscar_oferta_usuario');
+    });
