@@ -30,6 +30,22 @@ class OfertasController extends Controller
             return "fatal error -".$e->getMessage();
         }    
     }
+
+    public function listar(){
+        $categorias=DB::table('categoria')
+            ->select('nombrec','idcategoria')
+            ->get();
+        $institucion=DB::table('institucion')
+            ->select('nombrei','idinstitucion')
+            ->get();
+        $ofertas = DB::table('oferta')
+        ->join('institucion','institucion.idinstitucion','=','oferta.idinstitucion')
+        ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
+        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.idoferta','oferta.descripcion','oferta.medida','oferta.duracion')
+        ->get();
+        return view('usuarios.buscar_oferta_usuario',['ofertas'=>$ofertas],['categorias'=>$categorias],['instituciones'=>$institucion]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -63,7 +79,7 @@ class OfertasController extends Controller
             $ofertas->duracion = $request ->duracion;
             $ofertas->nombref = $request ->nombref;
             $ofertas->medida = $request ->medida;
-            //$ofertas->idinstitucion=3;
+            $ofertas->idinstitucion=1;
             $ofertas->descripcion = $request->descripcion;
             $ofertas->estado = 1;
             if ( $ofertas ->save()) {

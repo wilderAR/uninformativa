@@ -40,8 +40,6 @@
         <div class="col">
             <nav class="navbar navbar-dark bg-dark">
                 <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
-                {{-- <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>{{auth->user()->usuario}} 
-                </button>--}}
             </nav>
         </div>
     </div>

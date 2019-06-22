@@ -55,7 +55,7 @@
                                     <label for="">Categoria:</label>
                                 </td>
                                 <td>
-                                    <select name="idcategoria" id="idcategoria" class="btn btn-success">
+                                        <select name="idcategoria" id="idcategoria" class="btn btn-success">
                                         <option value="0">Seleccione una Categoria</option>
                                         @foreach ($categorias as $categoria)
                                             <option value="{{$categoria->idcategoria}}">{{$categoria->nombrec}}</option>

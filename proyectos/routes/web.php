@@ -25,9 +25,9 @@
     Route::post('anuncios/{id}','AnunciosController@disable')->name('anuncio.estado');
     Route::resource('examen','ExamenesController');
     Route::post('examen/{id}','ExamenesController@disable')->name('examen.estado');
-
-
+    // usuario
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/buscar', function () {
-        return view('usuarios.buscar_oferta_usuario');
+    Route::get('/buscar','OfertasController@listar');
+    route::get('/baseUsu',function(){
+      return view('base_usuario');
     });
