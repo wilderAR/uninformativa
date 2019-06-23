@@ -41,7 +41,7 @@ class OfertasController extends Controller
         $ofertas = DB::table('oferta')
         ->join('institucion','institucion.idinstitucion','=','oferta.idinstitucion')
         ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
-        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.idoferta','oferta.descripcion','oferta.medida','oferta.duracion')
+        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.idoferta','oferta.descripcion','oferta.medida','oferta.duracion','oferta.estado')->where('oferta.estado','=',1)
         ->get();
         return view('usuarios.buscar_oferta_usuario',['ofertas'=>$ofertas],['categorias'=>$categorias],['instituciones'=>$institucion]);
     }
