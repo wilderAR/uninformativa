@@ -13,7 +13,7 @@
     <style>
         .row.content {
             background-color: #f1f8e9;
-            height: 1500px
+            height: 550px
 
         }
 

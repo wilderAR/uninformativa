@@ -13,7 +13,9 @@
     <style>
         .row.content {
             background-color: #f1f8e9;
-            height: 1500px
+            height: 1000px;
+            width: 100rem
+
 
         }
 
@@ -41,6 +43,7 @@
             <nav class="navbar navbar-dark bg-dark">
                 <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
             </nav>
+            
         </div>
     </div>
     <div class="container-fluid">
