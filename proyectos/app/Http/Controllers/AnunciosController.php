@@ -23,8 +23,8 @@ class AnunciosController extends Controller
     //funcion para listar los anuncios
     public function list(){
         $anuncios = DB::table('anuncio')
-        ->join('institucion','idinstitucion','=','anuncio.idinstitucion')
-        ->select('institucion.nombrei','anuncio.fecha','anuncio.imagen','anuncio.descripcion')
+        ->join('institucion','institucion.idinstitucion','=','anuncio.idinstitucion')
+        ->select('institucion.nombrei','anuncio.fecha','anuncio.imagen','anuncio.descripcion')->where('anuncio.estado','=','1')
         ->get();
          //asi se retornara para mostrar en las vistas
          return view('Usuarios.inicio_usuario',['anuncios' => $anuncios]);
@@ -53,6 +53,7 @@ class AnunciosController extends Controller
             $anuncios->fecha=$request->fecha;
             $anuncios->descripcion=$request->descripcion;
             $anuncios->estado=1;
+            $anuncios->idinstitucion=1;
             if ($request->hasFile('imagen')) {
                 $file = $request->file('imagen');
                 $nombreimg = time().$file->getClientOriginalName();
@@ -71,7 +72,6 @@ class AnunciosController extends Controller
         return "fatal error -".$e->getMessage();
         }
     }
-
     /**
      * Display the specified resource.
      *
@@ -117,29 +117,6 @@ class AnunciosController extends Controller
         $anuncios->save();
         return redirect('anuncio');
     }
-     
-    // public function changePhotosave(Request $request){
-    //     try{
-    //       $anuncios = new  Anuncios;
-    //       $nombreimg='';
-    //       if ($request->hasFile('imagen')) {
-    //           $extenciones=['jpg','jpeg','gif','png'];
-    //           $file = $request->file('imagen');
-    //           $array_nombre = explode('.',$file->getClientOriginalName());
-    //           if(in_array($array_nombre[1],$extenciones)){
-    //             $nombreimg = time().$file->getClientOriginalName();
-    //             $file->move(public_path().'/imagenes/',$nombreimg);
-    //             $stm = DB::select();
-    //             return redirect()->back()->with('Completado');
-    //           }else{
-                  
-    //           }
-    //       } 
-    //     }catch(QueryException $e){
-        
-    //     }
-    // }
-
 
     public function disable($id){
         try{
