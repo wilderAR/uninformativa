@@ -48,7 +48,8 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest --}}
+                        @endguest 
+                        </ul>--}}
         </div>
         <div class="container">
             <div class="row justify-content-start">
