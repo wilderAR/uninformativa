@@ -2,6 +2,9 @@
 @section('title')
     Anuncios
 @endsection
+@section('modulo')
+    Anuncios
+@endsection
 @section('usuario')
     Institución
 @endsection
@@ -101,7 +104,7 @@
                     <th class="text-center">Imagen</th>
                     <th class="text-center">Descripción</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Modificar</th>
+                    <th class="text-center">Actualizar</th>
                     <th class="text-center">Visión</th>
                 </tr>
             </thead>
@@ -151,4 +154,7 @@
             </tbody>
         </table>
     </section>
+@endsection
+@section('migas')
+    <li class="active"><br>Anuncios</li>
 @endsection

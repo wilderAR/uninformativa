@@ -2,6 +2,9 @@
 @section('title') 
     Examenes 
 @endsection
+@section('modulo')
+    Examenes
+@endsection
 @section('usuario') 
     Institución 
 @endsection
@@ -92,7 +95,7 @@
                     <th class="text-center">Fecha Examen</th>
                     <th class="text-center">Costo</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Modificar</th>
+                    <th class="text-center">Actualizar</th>
                     <th class="text-center">Visión</th>
                 </tr>
             </thead>
@@ -141,4 +144,6 @@
         </table>
     </section>
 @endsection
-    
+@section('migas')
+    <li class="active"><br>Examenes</li>
+@endsection

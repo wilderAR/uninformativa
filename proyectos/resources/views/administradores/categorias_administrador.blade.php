@@ -19,15 +19,16 @@
     {{route('usuarios.index')}}
 @endsection
 @section('cont2')
-    <i class="fas fa-users"></i>
-    Usuarios
+    <i class="fas fa-users"></i> 
+    &nbsp;
+    Administradores
 @endsection
 @section('url3')
     {{route('institucion.index')}}
 @endsection
 @section('cont3')
-    <i class="fas fa-school"></i>
-    &nbsp;
+    <i class="fas fa-school"></i> 
+    &nbsp;    
     Instituciones
 @endsection
 @section('Contenido')
@@ -135,4 +136,7 @@
             </tbody>
         </table>
     </section>
+@endsection
+@section('migas')
+    <li class="active"><br>Categorias</li>
 @endsection

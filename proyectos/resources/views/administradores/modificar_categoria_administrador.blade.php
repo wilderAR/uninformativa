@@ -20,14 +20,16 @@
     {{route('usuarios.index')}}
 @endsection
 @section('cont2')
-    <i class="fas fa-users"></i>
-    Usuarios
+    <i class="fas fa-users"></i> 
+    &nbsp;
+    Administradores
 @endsection
 @section('url3')
     {{route('institucion.index')}}
 @endsection
 @section('cont3')
-    <i class="fas fa-school"></i>&nbsp;
+    <i class="fas fa-school"></i> 
+    &nbsp;    
     Instituciones
 @endsection
 @section('Contenido')
@@ -36,7 +38,7 @@
     @endphp
     <div class="card mt-5" style="width: 40rem; position: relative; top: -1%; left: 10%;">
         <div class="card-body">
-            <h2 class="card-title" style="position: relative; left: 30%">Modificar Categoria</h2>
+            <h2 class="card-title" style="position: relative; left: 30%">Actualizar Categoria</h2>
             <div class="card-body">
                 <form action="{{url('categoria/'.$id)}}" method="POST">
                     @method('PUT') 
@@ -60,7 +62,7 @@
                         </tr>    
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="btn btn-success" required value="Modificar Categoria" name="btn_modificar_categoria" id="btn_modificar_categoria" style="position: relative; left: 80%">
+                                <input type="submit" class="btn btn-success" required value="Actualizar Categoria" name="btn_modificar_categoria" id="btn_modificar_categoria" style="position: relative; left: 80%">
                             </td>
                         </tr>
                     </table>
@@ -68,4 +70,10 @@
             </div>
         </div>
     </div>
+@endsection
+@section('migas')
+    <li>
+        <a href="{{route('categoria.index')}}"><br>Categorias</a>
+    </li>
+    <li class="active"><br><br>Actualizar Categorias</li>
 @endsection

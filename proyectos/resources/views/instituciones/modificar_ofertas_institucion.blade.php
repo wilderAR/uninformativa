@@ -1,6 +1,9 @@
 @extends('../base')
 @section('title')
-    Oferta 
+    Ofertas
+@endsection
+@section('modulo')
+    Ofertas
 @endsection
 @section('usuario') 
     Institución 
@@ -35,7 +38,7 @@
     @endphp
     <div class="card mt-5" style="width: 50rem; position: relative; top: -1%; left: 10%;">
         <div class="card-body">
-            <h2 class="card-title" style="position: relative; left: 35%">Modificar Oferta</h2>
+            <h2 class="card-title" style="position: relative; left: 35%">Actualizar Oferta</h2>
             <div class="card-body">
                 <form action="{{url('oferta/'.$id)}}" method="POST">
                     @method('PUT')
@@ -112,4 +115,9 @@
         </div>
     </div>
 @endsection
-  
+@section('migas')
+    <li>
+        <a href="{{route('oferta.index')}}"><br>Ofertas</a>
+    </li>
+<li class="active"><br><br>Actualizar Ofertas</li>
+@endsection

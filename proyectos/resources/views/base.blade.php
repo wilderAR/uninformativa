@@ -13,24 +13,14 @@
     <style>
         .row.content {
             background-color: #f1f8e9;
-            height: 550px
+            min-height: 500px
 
         }
 
         .sidenav {
             background-color: #212121;
-            height: 100%;
-
-        }
-
-        @media screen and (max-width: 767px) {
-        .sidenav {
             height: auto;
             padding: 15px;
-        
-        }
-
-        .row.content {height: auto;}
 
         }
     </style>
@@ -40,6 +30,10 @@
         <div class="col-sm-12">
             <nav class="navbar navbar-dark bg-dark">
                 <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
+                <div></div>
+                <span class="navbar-brand mb-0 h1">@yield('modulo')</span>
+                <div></div>
+                <span class="navbar-brand mb-0 h1">@yield('desplegable')</span>
                 {{-- <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>{{auth->user()->usuario}} 
                 </button>--}}
             </nav>
@@ -64,7 +58,7 @@
                                 @yield('cont1')
                             </a>
                         </li>
-                        <li class="sidebar-item" style="width: 10vw;">
+                        <li class="sidebar-item" style="width: 12vw;">
                             <a href="@yield('url2')" class="sidebar-link waves-effect waves-dark sidebar-link">
                                 @yield('cont2')
                             </a>
@@ -83,7 +77,11 @@
         </div>
     </div>
     <footer class="">
-        Un&nformativa
+        <ol class="breadcrumb">
+            <li><a href="@yield('home')">Inicio</a></li>
+            @yield('migas')
+        </ol>
+        Un&nformativa POR MODIFICAR AÑADIR LA OTRA INFO
     </footer>
     <script src="{{ asset('../public/js/app.js') }}"></script>
     <script src="{{ asset('../public/js/app-style-swicher.js') }}"></script>
