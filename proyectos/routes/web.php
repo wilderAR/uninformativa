@@ -14,7 +14,7 @@
     });
     Route::post('institucion/{id}','institucionesController@disable')->name('institucion.estado');;
     //USUARIOS
-    Route::get('usuario',function(){return view('usuarios.inicio_usuario');})->name('usuario');
+    Route::get('usuario','anunciosController@list')->name('usuario');
     Route::resource('usuarios','UsuariosController');
     Route::post('usuarios/{id}','UsuariosController@disable')->name('usuario.estado');
     Route::resource('oferta','OfertasController');
@@ -28,6 +28,3 @@
     // usuario
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/buscar','OfertasController@listar');
-    route::get('/baseUsu',function(){
-      return view('base_usuario');
-    });
