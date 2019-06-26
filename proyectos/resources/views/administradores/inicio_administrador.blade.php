@@ -9,7 +9,7 @@
     Usuarios
 @endsection
 @section('img1')
-    {!! asset('imagenes/images.jpg') !!}
+    {!! asset('imagenes/usuarios.png') !!}
 @endsection
 @section('ruta2')
     {{route('categoria.index')}}
@@ -18,7 +18,7 @@
     Categorias
 @endsection
 @section('img2')
-    {!! asset('imagenes/categorias.jpg') !!}
+    {!! asset('imagenes/categorias.png') !!}
 @endsection
 @section('ruta3')
     {{route('institucion.index')}}

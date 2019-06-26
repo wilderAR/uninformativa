@@ -55,13 +55,13 @@
         </div>
         <div class="container">
             <div class="row justify-content-start">
-                    <div class="card" style="width: 18rem;">
+                    {{-- <div class="card" style="width: 18rem;">
                             <img src="@yield('img1')" alt="" class="img-fluid" width="" style=" border-radius: 50%">
                             <div class="card-body">
                               <h5 class="card-title text text-center">@yield('opcion1')</h5>
                               <p class="card-text">@yield('descripcion1')</p>
                             </div>
-                          </div>
+                          </div> --}}
                 <div class="col-4">
                 </div>
                 <div class="col-4">

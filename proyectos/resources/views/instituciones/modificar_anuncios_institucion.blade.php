@@ -62,7 +62,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="" class="btn btn-success">
+                                <label for="" class="btn btn-primary">
                                     <i class="fas fa-folder-open"></i>
                                     <input type="file" name="imagen" value="" id="imagen" class="" content="" style="border-radius: 5px; ">
                                 </label>
