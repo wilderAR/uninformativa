@@ -1,6 +1,9 @@
 @extends('../base')
 @section('title')
-    Oferta 
+    Ofertas
+@endsection
+@section('modulo')
+    Ofertas
 @endsection
 @section('usuario')
     Institución 
@@ -85,18 +88,18 @@
                                 </td>
                                 <td>
                                     <select class="btn btn-success" name="medida" id="medida">
-                                        <option value="AÑOS">Años</option>
-                                        <option value="SEMESTRE">Semestres</option>
-                                        <option value="TRIMESTRE">Trimestres</option>
-                                        <option value="MESES">Meses</option>
-                                        <option value="DIAS">Días</option>
-                                        <option value="HORA">Horas</option>
+                                        <option value="Años">Años</option>
+                                        <option value="Semestres">Semestres</option>
+                                        <option value="Trimestres">Trimestres</option>
+                                        <option value="Meses">Meses</option>
+                                        <option value="Días">Días</option>
+                                        <option value="Horas">Horas</option>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="">Descripcion:</label>
+                                    <label for="">Descripción:</label>
                                 </td>
                                 <td>
                                     <textarea class="form-control" cols="60" rows="10" name="descripcion" id="descripcion" style="width: 40vw" ></textarea>
@@ -141,7 +144,7 @@
                     <th class="text-center">Medida</th>
                     <th class="text-center">Descripción</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Modificar</th>
+                    <th class="text-center">Actualizar</th>
                     <th class="text-center">Visión</th>
                 </tr>
             </thead>
@@ -191,4 +194,7 @@
             </tbody>
         </table>
     </section>
+@endsection
+@section('migas')
+    <li class="active"><br>Ofertas</li>
 @endsection

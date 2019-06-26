@@ -1,6 +1,6 @@
 @extends('../base')
 @section('title')
-    Usuarios
+    Administrador
 @endsection
 @section('usuario')
     Administrador
@@ -20,7 +20,8 @@
 @endsection
 @section('cont2')
     <i class="fas fa-users"></i> 
-    Usuarios
+    &nbsp;
+    Administradores
 @endsection
 @section('url3')
     {{route('institucion.index')}}
@@ -40,8 +41,8 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title" style="position: relative; left: 40%">
-                        <label for="">Crear Usuario</label>
+                    <h2 class="modal-title" style="position: relative; left: 35%">
+                        <label for="">Crear Administrador</label>
                     </h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">X</span>
@@ -84,8 +85,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td style="position: relative; left: 80%">
-                                    <input type="submit" value="Crear Usuario" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-success">
+                                <td style="position: relative; left: 75%">
+                                    <input type="submit" value="Crear Administrador" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-success">
                                 </td>
                             </tr>
                         </table>
@@ -145,4 +146,7 @@
             </tbody>
         </table>
     </section>
+@endsection
+@section('migas')
+    <li class="active"><br>Administradores</li>
 @endsection

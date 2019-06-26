@@ -19,15 +19,16 @@
     {{route('usuarios.index')}}
 @endsection
 @section('cont2')
-    <i class="fas fa-users"></i>
-    Usuarios
+    <i class="fas fa-users"></i> 
+    &nbsp;
+    Administradores
 @endsection
 @section('url3')
     {{route('institucion.index')}}
 @endsection
 @section('cont3')
-    <i class="fas fa-school"></i>
-    &nbsp;
+    <i class="fas fa-school"></i> 
+    &nbsp;    
     Instituciones
 @endsection
 @section('Contenido')
@@ -88,7 +89,7 @@
                     <th class="text-center">Nombre Categoría</th>
                     <th class="text-center">Descripción</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Modificar</th>
+                    <th class="text-center">Actualizar</th>
                     <th class="text-center">Visión</th>
                 </tr>
             </thead>
@@ -135,4 +136,7 @@
             </tbody>
         </table>
     </section>
+@endsection
+@section('migas')
+    <li class="active"><br>Categorias</li>
 @endsection

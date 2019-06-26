@@ -14,10 +14,12 @@
 <body>
     <div class="row">
         <div class="col-sm-12">
-            <nav class="navbar navbar-light ">   
-                <div></div> 
-                <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>Cerrar sesion
-                </button>
+            <nav class="navbar navbar-dark bg-dark">  
+                <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
+                <div></div>
+                <span class="navbar-brand mb-0 h1">@yield('modulo')</span>
+                <div></div>
+                <span class="navbar-brand mb-0 h1">@yield('desplegable')</span>
             </nav>
                       {{-- <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -97,7 +99,7 @@
         </div>
     </div>
     <footer class="">
-        Un&nformativa
+        Un&nformativa POR MODIFICAR AÑADIR LA OTRA INFO
     </footer>
     <script src="{{ asset('../public/js/app.js') }}"></script>
     <script src="{{ asset('../public/js/app-style-swicher.js') }}"></script>

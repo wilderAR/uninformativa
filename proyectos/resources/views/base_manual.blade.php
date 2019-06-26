@@ -13,8 +13,7 @@
     <style>
         .row.content {
             background-color: #f1f8e9;
-            height: 1000px;
-            width: 100rem
+            height: 550px
 
         }
 
@@ -38,17 +37,15 @@
 </head>
 <body>
     <div class="row">
-        <div class="col">
+        <div class="col-sm-12">
             <nav class="navbar navbar-dark bg-dark">
                 <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
+                {{-- <button type="submit" class="btn btn-danger"><i class="fas fa-sign-out-alt"></i>{{auth->user()->usuario}} 
+                </button>--}}
             </nav>
-            
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row content">
-            @yield('Contenido')
-        </div>
+        @yield('Contenido')
     </div>
     <footer class="">
         Un&nformativa
@@ -60,3 +57,4 @@
     <script src="{{ asset('../public/js/waves.js') }}"></script>
 </body>
 </html>
+

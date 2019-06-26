@@ -2,6 +2,9 @@
 @section('title') 
     Anuncios 
 @endsection
+@section('modulo')
+    Anuncios
+@endsection
 @section('usuario') 
     Institución 
 @endsection
@@ -35,7 +38,7 @@
     @endphp
     <div class="card mt-5" style="width: 57rem; position: relative; top: -1%; left: 5%;">
         <div class="card-body">
-            <h2 class="card-title" style="position: relative; left: 35%">Modificar Anuncio</h2>
+            <h2 class="card-title" style="position: relative; left: 35%">Actualizar Anuncio</h2>
             <div class="card-body">
                 <form action="{{url('anuncio/'.$id)}}" method="POST" enctype="multipart/form-data">
                     @method('PUT')
@@ -75,7 +78,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" value="Modificar Anuncio" class=" btn btn-success" style="position: relative; left: 80%">
+                                <input type="submit" value="Actualizar Anuncio" class=" btn btn-success" style="position: relative; left: 80%">
                             </td>
                         </tr>
                     </table>
@@ -83,4 +86,10 @@
             </div>
         </div>
     </div>
+@endsection
+@section('migas')
+    <li>
+        <a href="{{route('anuncio.index')}}"><br>Anuncios</a>
+    </li>
+    <li class="active"><br><br>Actualizar Anuncios</li>
 @endsection

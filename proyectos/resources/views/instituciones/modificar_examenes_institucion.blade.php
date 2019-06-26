@@ -2,6 +2,9 @@
 @section('title') 
     Examenes 
 @endsection
+@section('modulo')
+    Examenes
+@endsection
 @section('usuario') 
     Institución 
 @endsection
@@ -35,7 +38,7 @@
     @endphp
     <div class="card mt-5" style="width: 43rem; position: relative; top: -1%; left: 10%;">
         <div class="card-body">
-            <h2 class="card-title" style="position: relative; left: 30%">Modificar Examen</h2>
+            <h2 class="card-title" style="position: relative; left: 30%">Actualizar Examen</h2>
             <div class="card-body">
                 <form action="{{url('examen/'.$id)}}" method="POST">
                     @method('PUT')
@@ -59,7 +62,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" value="Modificar Examen" name="btn_modificar_examen" id="btn_modificar_examen" class="btn btn-success " style="position: relative; left: 80%">
+                                <input type="submit" value="Actualizar Examen" name="btn_modificar_examen" id="btn_modificar_examen" class="btn btn-success " style="position: relative; left: 80%">
                             </td>
                         </tr>
                     </table>
@@ -67,4 +70,10 @@
             </div>
         </div>
     </div>   
+@endsection
+@section('migas')
+    <li>
+        <a href="{{route('examen.index')}}"><br>Examenes</a>
+    </li>
+    <li class="active"><br><br>Actualizar Examenes</li>
 @endsection
