@@ -32,7 +32,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i>
         Crear Institución
     </button>         
@@ -85,7 +85,7 @@
                             </tr>
                             <tr>
                                 <td style="position: relative; left: 80%">
-                                    <input type="submit" value="Crear Institución" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-success">
+                                    <input type="submit" value="Crear Institución" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-primary">
                                 </td>
                             </tr>
                         </table>

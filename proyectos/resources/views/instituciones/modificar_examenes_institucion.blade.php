@@ -59,7 +59,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" value="Modificar Examen" name="btn_modificar_examen" id="btn_modificar_examen" class="btn btn-success " style="position: relative; left: 80%">
+                                <input type="submit" value="Modificar Examen" name="btn_modificar_examen" id="btn_modificar_examen" class="btn btn-primary" style="position: relative; left: 80%">
                             </td>
                         </tr>
                     </table>

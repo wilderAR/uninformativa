@@ -31,7 +31,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i>
         Crear Anuncio
     </button>
@@ -64,7 +64,7 @@
                                 </td>
                                 <td>
                                     <div>
-                                        <label for="" class="btn btn-success">
+                                        <label for="" class="btn btn-primary">
                                             <i class="fas fa-folder-open"></i>
                                             <input type="file" name="imagen" value="" id="imagen" required class="" content="" style="border-radius: 5px;">
                                         </label>
@@ -81,7 +81,7 @@
                             </tr>
                             <tr>
                                 <td style="position: relative; left: 80%">
-                                    <input type="submit" value="Crear Anuncio" name="btn_crear_anuncio" id="btn_crear_anuncio" class="btn btn-success">
+                                    <input type="submit" value="Crear Anuncio" name="btn_crear_anuncio" id="btn_crear_anuncio" class="btn btn-primary">
                                 </td>
                             </tr>
                         </table>

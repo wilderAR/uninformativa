@@ -53,13 +53,20 @@
         </div>
         <div class="container">
             <div class="row justify-content-start">
+                    <div class="card" style="width: 18rem;">
+                            <img src="@yield('img1')" alt="" class="img-fluid" width="" style=" border-radius: 50%">
+                            <div class="card-body">
+                              <h5 class="card-title text text-center">@yield('opcion1')</h5>
+                              <p class="card-text">@yield('descripcion1')</p>
+                            </div>
+                          </div>
                 <div class="col-4">
                 </div>
                 <div class="col-4">
                     <br>
                     <div class="card ">
                         <label for="" class="card-title text text-center"> 
-                            <h2>@yield('opcion1')</h2>
+                            <h2></h2>
                         </label>   
                         <a href="@yield('ruta1')" class="card-body center-block" style="display:block;margin:auto;">
                             <img src="@yield('img1')" alt="" class="img-fluid" style=" border-radius: 50%">

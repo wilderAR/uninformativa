@@ -103,7 +103,7 @@
                         </tr>
                         <tr>
                             <td style="position: relative; left: 60%">
-                                <input type="submit" value="Modificar Oferta" name="btn_modificar_oferta" id="btn_modificar_oferta" class="btn btn-success" style="position: relative; left: 90%;">
+                                <input type="submit" value="Modificar Oferta" name="btn_modificar_oferta" id="btn_modificar_oferta" class="btn btn-primary" style="position: relative; left: 90%;">
                             </td>
                         </tr>
                     </table>

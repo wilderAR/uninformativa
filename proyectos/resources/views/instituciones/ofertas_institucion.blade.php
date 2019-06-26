@@ -31,7 +31,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i> 
         Crear Oferta
     </button>
@@ -55,7 +55,7 @@
                                     <label for="">Categoria:</label>
                                 </td>
                                 <td>
-                                        <select name="idcategoria" id="idcategoria" class="btn btn-success">
+                                        <select name="idcategoria" id="idcategoria" class="btn btn-primary">
                                         <option value="0">Seleccione una Categoria</option>
                                         @foreach ($categorias as $categoria)
                                             <option value="{{$categoria->idcategoria}}">{{$categoria->nombrec}}</option>
@@ -84,7 +84,7 @@
                                     <label for="">Medida:</label>
                                 </td>
                                 <td>
-                                    <select class="btn btn-success" name="medida" id="medida">
+                                    <select class="btn btn-primary" name="medida" id="medida">
                                         <option value="AÑOS">Años</option>
                                         <option value="SEMESTRE">Semestres</option>
                                         <option value="TRIMESTRE">Trimestres</option>
@@ -104,7 +104,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2"> 
-                                    <input type="submit" value="Crear Oferta" name="send" id="btn_crear_oferta" class="btn btn-success" style="position: relative; left: 85%" >
+                                    <input type="submit" value="Crear Oferta" name="send" id="btn_crear_oferta" class="btn btn-primary" style="position: relative; left: 85%" >
                                 </td>
                             </tr>
                         </table>

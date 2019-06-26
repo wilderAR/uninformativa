@@ -16,8 +16,7 @@ class ExamenesController extends Controller
     {
         try{
         $examenes=DB::table('examen')
-        // ->join('institucion','institucion.idinstitucion','=','examen.idinstitucion')
-        ->select('examen.idexamen','examen.fecha','examen.costo','examen.estado')#->where('examen.idinstitucion','=')
+        ->select('examen.idexamen','examen.fecha','examen.costo','examen.estado','examen.nombrex')
         ->get();
         return view('instituciones.examenes_institucion',['examenes'=>$examenes]);
         }catch(Exception $e){
@@ -52,6 +51,7 @@ class ExamenesController extends Controller
         try {
             $examenes=new examenes;
             // $examenes->idinstitucion=
+            $examenes->nombrex = $request->nombrex;
             $examenes->fecha=$request->fecha;
             $examenes->costo=$request->costo;
             $examenes->estado=1;

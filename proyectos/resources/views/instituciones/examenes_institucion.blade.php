@@ -31,7 +31,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i> 
         Crear Examen
     </button>
@@ -51,6 +51,10 @@
                         {{csrf_field()}}
                         <table class="table">
                             <tr>
+                                <td><label for="">Nombre Examen:</label></td>
+                                <td><input type="text" name="nombrex" id="nombrex" class="form-control" style="border-radius:5%; width: 60%;" required></td>
+                            </tr>
+                            <tr>
                                 <td> 
                                     <label for="">Fecha de Examen:</label>
                                 </td>
@@ -68,7 +72,7 @@
                             </tr>
                             <tr>
                                 <td style="position: relative; left: 70%">
-                                    <input type="submit" value="Crear Examen" name="send" id="send" class="btn btn-success">
+                                    <input type="submit" value="Crear Examen" name="send" id="send" class="btn btn-primary">
                                 </td>   
                             </tr>
                         </table>
@@ -84,6 +88,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center">Id de Examen</th>
+                    <th class="text-center">Nombre Examen</th>
                     <th class="text-center">Fecha Examen</th>
                     <th class="text-center">Costo</th>
                     <th class="text-center">Estado</th>
@@ -98,6 +103,7 @@
                     @php
                         $id=$examen->idexamen;
                     @endphp
+                    <td class="text center">{{$examen->nombrex}}</td>
                     <td class="text-center">{{$examen->fecha}}</td>
                     <td class="text-center">{{number_format($examen->costo,2)}}</td>
                     <td class="text-center">

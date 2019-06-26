@@ -32,7 +32,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i>
         Crear Categoria
     </button>
@@ -69,7 +69,7 @@
                             </tr>
                             <tr>
                                 <td style="position: relative; left: 80%">
-                                    <input type="submit" value="Crear Categoria" class="btn btn-success" name="btn_crear_categoria" id="btn_crear_categoria">
+                                    <input type="submit" value="Crear Categoria" class="btn btn-primary" name="btn_crear_categoria" id="btn_crear_categoria">
                                 </td>
                             </tr>
                         </table>
@@ -88,7 +88,7 @@
                     <th class="text-center">Nombre Categoría</th>
                     <th class="text-center">Descripción</th>
                     <th class="text-center">Estado</th>
-                    <th class="text-center">Modificar</th>
+                    <th class="text-center">Actualizar</th>
                     <th class="text-center">Visión</th>
                 </tr>
             </thead>

@@ -43,6 +43,7 @@ class CategoriasController extends Controller
         $categorias = new categorias;
         $categorias->nombrec =$request->nombre;
         $categorias->descripcion= $request->descripcion;
+        $categorias->idusuario = 1;
         $categorias->estado = 1;
         $categorias->save();
         return redirect('categoria');

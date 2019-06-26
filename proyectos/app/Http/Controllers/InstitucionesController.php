@@ -23,12 +23,6 @@ class InstitucionesController extends Controller
         ->select('institucion.idinstitucion','institucion.pagina','institucion.usuarioi')
         ->get();
     }
-    
-    public function create()
-    {
-        return view('administradores.crear_institucion_administrador');
-    }
-
     /**
      * Store a newly created resource in storage.
      *
