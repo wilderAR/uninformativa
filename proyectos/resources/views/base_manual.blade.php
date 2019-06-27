@@ -23,6 +23,12 @@
 
         }
 
+        .sidenav {
+            background-color: #212121;
+            height: 100%;
+            box-shadow:5px 0px 2px 0px #757575;
+        }
+        
         @media screen and (max-width: 767px) {
         .sidenav {
             height: auto;

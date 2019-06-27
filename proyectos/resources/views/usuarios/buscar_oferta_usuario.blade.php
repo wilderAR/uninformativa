@@ -25,19 +25,19 @@
                                 <form action="" method="get">
                                     <table>
                                         <tr>
-                                            <td><input type="submit" value="Categoria" class="btn btn-primary"></td>
+                                            <td><input type="submit" value="Categoria" class="btn btnMenu"></td>
                                         </tr>
                                         <tr>
                                             <td>&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td><a href="{{url('buscar/instituciones')}}">Institucion-</a></td>
+                                            <td><a href="{{url('buscar/instituciones')}}" class="btn btnMenu">Institucion</a></td>
                                         </tr>
                                         <tr>
                                             <td>&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td><input type="submit" value="Duracion" class="btn btn-primary"></td>
+                                            <td><input type="submit" value="Duracion" class="btn btnMenu"></td>
                                         </tr>
                                     </table>
                                 </form>
@@ -46,23 +46,16 @@
                 </nav>
             </div>
             <div class="col-sm-10">
-                <table>
+                    <h1 class="pl-5 pt-3">Buscar Ofertas</h1>
+
+                <table class="table table-bordered">
                     <tr>
-                        <td colspan="4"><h1>Buscar Ofertas</h1></td>
-                    </tr>
-                    <tr>
-                            <td>
                                     @foreach ($ofertas as $oferta)
-                                            <div class="card" style="width: 25rem; height: 15rem">
-                                                    <div class="card-body">
-                                                        @php
-                                                            $idoferta=$oferta->idoferta;
-                                                        @endphp
-                                                      <a href="{{url('oferta/'.$idoferta.'/mostrar')}}">{{$oferta->nombref}}</a>
-                                                    </div>
-                                                  </div> 
-                                    @endforeach   
+                                    <td class="col">
+                                        @php $idoferta=$oferta->idoferta; @endphp
+                                        <a href="{{url('oferta/'.$idoferta.'/mostrar')}}">{{$oferta->nombref}}</a>
                                     </td>
+                                    @endforeach   
                     </tr>
                 </table>
                    
