@@ -106,7 +106,7 @@
                                             <td>&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td><input type="submit" value="Institucion" class="btn btn-primary"></td>
+                                            <td><a href="{{url('buscar/instituciones')}}">Institucion</a></td>
                                         </tr>
                                         <tr>
                                             <td>&nbsp;</td>
@@ -130,13 +130,10 @@
                                     @foreach ($ofertas as $oferta)
                                             <div class="card" style="width: 25rem; height: 15rem">
                                                     <div class="card-body">
-                                                      <h5 class="card-title"> <label for=""> Nombre: &nbsp;</label>{{$oferta->nombref}}</h5>
-                                                      <p class="card-text">
-                                                          <label for="">Categoria: </label> {{$oferta->nombrec}} <br>
-                                                          <label for="">Institucion: </label> {{$oferta->nombrei}} <br>
-                                                          <label for="">Descripcion: </label> {{$oferta->descripcion}}. <br>
-                                                          <label for="">Tiempo: </label> {{$oferta->duracion}}&nbsp;{{$oferta->medida}}
-                                                      </p>
+                                                        @php
+                                                            $idoferta=$oferta->idoferta;
+                                                        @endphp
+                                                      <a href="{{url('oferta/'.$idoferta.'/mostrar')}}">{{$oferta->nombref}}</a>
                                                     </div>
                                                   </div> 
                                     @endforeach   

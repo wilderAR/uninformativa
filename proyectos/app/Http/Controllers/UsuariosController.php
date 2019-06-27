@@ -16,7 +16,7 @@ class UsuariosController extends Controller
     public function index()
     {
         $usuarios=DB::table('usuario')
-        ->select('usuario.idusuario','usuario.usuario','usuario.contraseña','usuario.tipo_usuario','usuario.estado','usuario.correo')->where('usuario.tipo_usuario','=',3)
+        ->select('usuario.idusuario','usuario.usuario','usuario.contraseña','usuario.tipo_usuario','usuario.estado','usuario.correo')->where('usuario.tipo_usuario','=',1)
         ->get();
         return view('administradores.usuarios_administrador',['usuarios'=>$usuarios]);
     }
@@ -42,7 +42,7 @@ class UsuariosController extends Controller
     {
     try {
         $usuarios = new usuarios;
-        $usuarios->tipo_usuario=3; 
+        $usuarios->tipo_usuario=1; 
         $usuarios ->usuario = $request->usuario;
         $usuarios ->contraseña = $request->contraseña;
         $usuarios ->correo = $request->correo;

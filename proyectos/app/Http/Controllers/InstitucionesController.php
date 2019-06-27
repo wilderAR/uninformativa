@@ -19,9 +19,9 @@ class InstitucionesController extends Controller
    
     public function list(){
         $instituciones = DB::table('institucion')
-        ->join('usuario','usuario.idusuario','=','institucion.idusuario')
-        ->select('institucion.idinstitucion','institucion.pagina','institucion.usuarioi')
+        ->select('institucion.idinstitucion','institucion.pagina','institucion.nombrei')
         ->get();
+        return view('usuarios.listar_institucion',['instituciones'=>$instituciones]);
     }
     /**
      * Store a newly created resource in storage.

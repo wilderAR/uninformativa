@@ -33,9 +33,9 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i>
-        Crear Usuario
+        Crear Administrador
     </button>         
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -86,7 +86,7 @@
                             </tr>
                             <tr>
                                 <td style="position: relative; left: 75%">
-                                    <input type="submit" value="Crear Administrador" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-success">
+                                    <input type="submit" value="Crear Administrador" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-primary">
                                 </td>
                             </tr>
                         </table>

@@ -23,7 +23,7 @@ class OfertasController extends Controller
             ->get();
          $ofertas = DB::table('oferta')
          ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
-         ->select('oferta.idoferta','categoria.nombrec','oferta.nombref','oferta.duracion','oferta.medida','oferta.estado','oferta.descripcion')//->where('oferta.estado','=',1)
+         ->select('oferta.idoferta','categoria.nombrec','oferta.nombref','oferta.duracion','oferta.medida','oferta.estado','oferta.descripcion')->where('oferta.idoferta','=',1)
          ->get();
          return view('instituciones.ofertas_institucion',['ofertas'=> $ofertas],['categorias'=>$categorias]);
         }catch(QueryException $e){
@@ -128,6 +128,39 @@ class OfertasController extends Controller
 
     }
 
+    public function listarCategorias(Request $request){
+        
+        $ofertas=DB::table('oferta')
+        ->join('institucion','institucion.idinstitucion','=','oferta.idinstitucion')
+        ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
+        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.descripcion','oferta.medida','oferta.duracion')->where('oferta.idcategoria','=',$request->idcategoria)
+        ->get();
+        return $ofertas;
+    }
+    
+    public function mostrarOferta($idoferta){
+      $ofertas=DB::table('oferta')
+      ->join('institucion','institucion.idinstitucion','=','oferta.idinstitucion')
+      ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
+      ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.descripcion','oferta.medida','oferta.duracion')->where('oferta.idoferta','=',$idoferta)
+      ->get();
+       return view('usuarios.mostrar_oferta',['ofertas'=>$ofertas[0]]);
+    }
+
+    public function mostrarDatosIntitucion($idinstitucion){
+        $instituciones=DB::table('institucion')
+        ->select('institucion.nombrei','institucion.pagina','institucion.idinstitucion')->where('institucion.idinstitucion','=',$idinstitucion)
+        ->get();
+        $ofertas=DB::table('oferta')
+        ->join('institucion','institucion.idinstitucion','=','oferta.idinstitucion')
+        ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
+        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.descripcion','oferta.medida','oferta.duracion','oferta.idinstitucion')->where('oferta.idinstitucion','=',$idinstitucion)
+        ->get();
+        $examenes=DB::table('examen')
+        ->select('examen.nombrex','examen.fecha','examen.costo','examen.idinstitucion')->where('examen.idinstitucion','=',$idinstitucion)
+        ->get();
+        return view('usuarios.mostrarDatosinst',['ofertas'=>$ofertas],['examenes'=>$examenes],['instituciones'=>$instituciones[0]]);
+    }
     /**
      * Show the form for editing the specified resource.
      *

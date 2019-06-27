@@ -28,3 +28,6 @@
     // usuario
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/buscar','OfertasController@listar');
+    Route::get('oferta/{idoferta}/mostrar','OfertasController@mostraroferta')->name('oferta.mostrar');
+    Route::get('buscar/instituciones','institucionesController@list')->name('instituciones');
+    Route::get('buscar/instituciones/{idinstitucion}','OfertasController@mostrarDatosIntitucion');
