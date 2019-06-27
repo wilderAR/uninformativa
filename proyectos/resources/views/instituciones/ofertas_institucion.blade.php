@@ -117,7 +117,7 @@
         </div>
     </div>
     <p>
-    <form action="" method="post">
+    {{-- <form action="" method="post">
         <table>
             <tr>
                 <td>
@@ -130,11 +130,11 @@
                 </td>
             </tr>
         </table>
-    </form>
+    </form> --}}
     <p>
     <br>
     <section>
-        <table class="table table-bordered">
+        <table class="table table-bordered " style="width: 75%">
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center">#</th>

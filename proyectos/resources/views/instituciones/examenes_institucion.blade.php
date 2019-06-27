@@ -87,7 +87,7 @@
     <p>
     <br>
     <section>
-        <table class="table table-bordered">        
+        <table class="table table-bordered" style="width: 75%">        
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center">Id de Examen</th>
