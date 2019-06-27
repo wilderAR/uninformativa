@@ -3,7 +3,6 @@
     Instituciones
 @endsection
 @section('Contenido')
-<a href="{{url('buscar/')}}"><i class="fas fa-arrow-left btnAtras p-3"></i></a>
 <div class="container-fluid">
   @foreach ($instituciones as $institucion)
   @php
