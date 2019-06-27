@@ -71,6 +71,9 @@
             .btnAtras:hover{
                 color:#757575;
             }
+            .table{
+                width:75%;
+            }
         </style>
 </head>
 <body>

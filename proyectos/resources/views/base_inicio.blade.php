@@ -71,6 +71,8 @@
             .btnAtras:hover{
                 color:#757575;
             }
+
+            
         </style>
 </head>
 <body>
@@ -84,8 +86,9 @@
                 <div></div>
                 <span class="navbar-brand mb-0 h1">@yield('desplegable')</span>
             </nav>
+
         </div>
-        <div class="container">
+        <div class="container mt-5">
             <div class="row justify-content-start">
                 <div class="col">
                     <div class="card ">
