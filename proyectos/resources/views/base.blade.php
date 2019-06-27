@@ -11,19 +11,67 @@
     <link rel="stylesheet" href="{{ asset('../public/css/app.css') }}">
     <title>@yield('title')</title>
     <style>
-        .row.content {
-            background-color: #f1f8e9;
-            min-height: 500px
-
-        }
-
-        .sidenav {
-            background-color: #212121;
-            height: auto;
-            padding: 15px;
-            box-shadow:5px 5px 2px 0px #757575;
-        }
-    </style>
+            .row.content {
+                background-color: #f1f8e9;
+                height: 1000px;
+                width: 100rem
+    
+            }
+    
+            .sidenav {
+                background-color: #212121;
+                height: 100%;
+                box-shadow:5px 5px 2px 0px #757575;
+            }
+    
+            @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            
+            }
+    
+            .row.content {height: auto;
+            }
+    
+            }
+            a{
+                color: #212121;
+            }
+            a:hover{
+                color: dimgrey;
+                text-decoration: none;
+            }
+            /*Boton Menu Usuarios*/
+            .btnMenu{
+                background-color:#424242;
+                width:18vw;
+                color:white;
+            }
+            /*Boton Menu Usuarios*/
+            .btnMenu:hover{
+                background-color:#6d6d6d;
+            }
+            /*Boton de Universidades*/
+            .btnMenuUni{
+                background-color:#424242;
+                width:100%;
+                color:white;
+                margin-top:-10%;
+            }
+            /*Carta Universidades*/
+            .cardUni{
+                width:30vw;
+                margin-left:36vw;
+            }
+            /*Boton Flecha Atras*/
+            .btnAtras{
+                font-size:2rem;
+            }
+            .btnAtras:hover{
+                color:#757575;
+            }
+        </style>
 </head>
 <body>
     <div class="row">

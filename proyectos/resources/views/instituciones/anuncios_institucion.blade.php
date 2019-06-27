@@ -34,7 +34,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btnMenu" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i>
         Crear Anuncio
     </button>

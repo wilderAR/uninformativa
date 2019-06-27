@@ -14,7 +14,7 @@
                                         <input type="text" class="input-group-text" id="busqueda" placeholder="Buscar Oferta" autofocus>
                                     </td>
                                     <td>
-                                        <button class="btn btn-secondary btn-lg" type="submit">
+                                        <button class="btn   btn-lg" type="submit">
                                             <i class="fas fa-search"></i>
                                         </button>
                                     </td>
@@ -49,14 +49,16 @@
                     <h1 class="pl-5 pt-3">Buscar Ofertas</h1>
 
                 <table class="table table-bordered">
-                    <tr>
+                    
                                     @foreach ($ofertas as $oferta)
+                                    <tr>
                                     <td class="col">
                                         @php $idoferta=$oferta->idoferta; @endphp
                                         <a href="{{url('oferta/'.$idoferta.'/mostrar')}}">{{$oferta->nombref}}</a>
                                     </td>
+                                </tr>
                                     @endforeach   
-                    </tr>
+                    
                 </table>
                    
             </div>

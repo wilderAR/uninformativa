@@ -28,7 +28,13 @@
             height: 100%;
             box-shadow:5px 0px 2px 0px #757575;
         }
-        
+        a{
+            color: #212121;
+        }
+        a:hover{
+            color: dimgrey;
+            text-decoration: none;
+        }
         @media screen and (max-width: 767px) {
         .sidenav {
             height: auto;

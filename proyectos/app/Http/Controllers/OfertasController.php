@@ -24,7 +24,7 @@ class OfertasController extends Controller
             ->get();
          $ofertas = DB::table('oferta')
          ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
-         ->select('oferta.idoferta','categoria.nombrec','oferta.nombref','oferta.duracion','oferta.medida','oferta.estado','oferta.descripcion')->where('oferta.idoferta','=',1)
+         ->select('oferta.idoferta','categoria.nombrec','oferta.nombref','oferta.duracion','oferta.medida','oferta.estado','oferta.descripcion')
          ->get();
          return view('instituciones.ofertas_institucion',['ofertas'=> $ofertas],['categorias'=>$categorias]);
         }catch(QueryException $e){
@@ -42,7 +42,7 @@ class OfertasController extends Controller
         $ofertas = DB::table('oferta')
         ->join('institucion','institucion.idinstitucion','=','oferta.idinstitucion')
         ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
-        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.idoferta','oferta.descripcion','oferta.medida','oferta.duracion','oferta.estado')->where('oferta.estado','=',1)
+        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.idoferta','oferta.descripcion','oferta.medida','oferta.duracion','oferta.estado')
         ->get();
         return view('usuarios.buscar_oferta_usuario',['ofertas'=>$ofertas],['categorias'=>$categorias],['instituciones'=>$institucion]);
     }

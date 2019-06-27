@@ -10,8 +10,71 @@
     <link rel="stylesheet" href="{{ asset('../public/css/style.') }}">
     <link rel="stylesheet" href="{{ asset('../public/css/') }}">
     <title>@yield('title')</title>
+    <style>
+            .row.content {
+                background-color: #f1f8e9;
+                height: 1000px;
+                width: 100rem
+    
+            }
+    
+            .sidenav {
+                background-color: #212121;
+                height: 100%;
+                box-shadow:5px 5px 2px 0px #757575;
+            }
+    
+            @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            
+            }
+    
+            .row.content {height: auto;
+            }
+    
+            }
+            a{
+                color: #212121;
+            }
+            a:hover{
+                color: dimgrey;
+                text-decoration: none;
+            }
+            /*Boton Menu Usuarios*/
+            .btnMenu{
+                background-color:#424242;
+                width:18vw;
+                color:white;
+            }
+            /*Boton Menu Usuarios*/
+            .btnMenu:hover{
+                background-color:#6d6d6d;
+            }
+            /*Boton de Universidades*/
+            .btnMenuUni{
+                background-color:#424242;
+                width:100%;
+                color:white;
+                margin-top:-10%;
+            }
+            /*Carta Universidades*/
+            .cardUni{
+                width:30vw;
+                margin-left:36vw;
+            }
+            /*Boton Flecha Atras*/
+            .btnAtras{
+                font-size:2rem;
+            }
+            .btnAtras:hover{
+                color:#757575;
+            }
+        </style>
 </head>
 <body>
+    
     <div class="row">
         <div class="col-sm-12">
             <nav class="navbar navbar-dark bg-dark">  
@@ -21,88 +84,40 @@
                 <div></div>
                 <span class="navbar-brand mb-0 h1">@yield('desplegable')</span>
             </nav>
-                      {{-- <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                   <span class="caret"></span>
-                                </a>      
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest 
-                        </ul>--}}
         </div>
         <div class="container">
             <div class="row justify-content-start">
-                    {{-- <div class="card" style="width: 18rem;">
-                            <img src="@yield('img1')" alt="" class="img-fluid" width="" style=" border-radius: 50%">
-                            <div class="card-body">
-                              <h5 class="card-title text text-center">@yield('opcion1')</h5>
-                              <p class="card-text">@yield('descripcion1')</p>
-                            </div>
-                          </div> --}}
-                <div class="col-4">
-                </div>
-                <div class="col-4">
-                    <br>
+                <div class="col">
                     <div class="card ">
                         <label for="" class="card-title text text-center"> 
-                            <h2></h2>
+                            <h2>@yield('opcion1')</h2>
                         </label>   
                         <a href="@yield('ruta1')" class="card-body center-block" style="display:block;margin:auto;">
                             <img src="@yield('img1')" alt="" class="img-fluid" style=" border-radius: 50%">
                         </a> 
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col">
+
+                        <div class="card ">
+                            <label for="" class="card-title text text-center"> 
+                                <h2>@yield('opcion2')</h2>
+                            </label>   
+                            <a href="@yield('ruta2')" class="card-body center-block" style="display:block;margin:auto;">
+                                <img src="@yield('img2')" alt="" class="img-fluid" style=" border-radius: 50%;">
+                            </a> 
+                        </div>  
                 </div>
-            </div>
-            <div class="row justify-content-start">
-                <div class="col-4">
-                    <br>
-                    <div class="card ">
-                        <label for="" class="card-title text text-center"> 
-                            <h2>@yield('opcion2')</h2>
-                        </label>   
-                        <a href="@yield('ruta2')" class="card-body center-block" style="display:block;margin:auto;">
-                            <img src="@yield('img2')" alt="" class="img-fluid" style=" border-radius: 50%;">
-                        </a> 
-                    </div>  
-                </div>
-                <div class="col-4">
-                </div>
-                <div class="col-4">
-                    <br>
-                    <div class="card ">
-                        <label for="" class="card-title text text-center"> 
-                            <h2>@yield('opcion3')</h2>
-                        </label>   
-                        <a href="@yield('ruta3')" class="card-body center-block" style="display:block;margin:auto;">
-                            <img src="@yield('img3')" alt="" class="img-fluid" style=" border-radius: 50%">
-                        </a>    
-                    </div>  
-                </div>
+                <div class="col">
+                        <div class="card ">
+                            <label for="" class="card-title text text-center"> 
+                                <h2>@yield('opcion3')</h2>
+                            </label>   
+                            <a href="@yield('ruta3')" class="card-body center-block" style="display:block;margin:auto;">
+                                <img src="@yield('img3')" alt="" class="img-fluid" style=" border-radius: 50%">
+                            </a>    
+                        </div>  
+                    </div>
             </div>
         </div>
     </div>

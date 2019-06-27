@@ -34,7 +34,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btnMenu" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i> 
         Crear Oferta
     </button>
@@ -87,7 +87,7 @@
                                     <label for="">Medida:</label>
                                 </td>
                                 <td>
-                                    <select class="btn btn-success" name="medida" id="medida">
+                                    <select class="btn btn-primary" name="medida" id="medida">
                                         <option value="Años">Años</option>
                                         <option value="Semestres">Semestres</option>
                                         <option value="Trimestres">Trimestres</option>

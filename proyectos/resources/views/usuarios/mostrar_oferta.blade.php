@@ -1,4 +1,7 @@
 @extends('base_usuario')
+@section('title')
+    {{$ofertas->nombref}}
+@endsection
 @section('Contenido')
 <table>
     <tr>
