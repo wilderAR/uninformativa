@@ -50,7 +50,7 @@ class ExamenesController extends Controller
     {
         try {
             $examenes=new examenes;
-            // $examenes->idinstitucion=
+            $examenes->idinstitucion=1;
             $examenes->nombrex = $request->nombrex;
             $examenes->fecha=$request->fecha;
             $examenes->costo=$request->costo;

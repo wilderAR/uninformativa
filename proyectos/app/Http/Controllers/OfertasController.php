@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Oferta;
 use App\categorias;
+use App\examenes;
 use PHPUnit\Framework\Exception;
 use Illuminate\Database\QueryException;
 
@@ -154,12 +155,12 @@ class OfertasController extends Controller
         $ofertas=DB::table('oferta')
         ->join('institucion','institucion.idinstitucion','=','oferta.idinstitucion')
         ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
-        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.descripcion','oferta.medida','oferta.duracion','oferta.idinstitucion')->where('oferta.idinstitucion','=',$idinstitucion)
+        ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.descripcion','oferta.medida','oferta.duracion','oferta.idinstitucion')->where('oferta.idinstitucion','=',$idinstitucion)->where('oferta.estado','=',1)
         ->get();
         $examenes=DB::table('examen')
         ->select('examen.nombrex','examen.fecha','examen.costo','examen.idinstitucion')->where('examen.idinstitucion','=',$idinstitucion)
         ->get();
-        return view('usuarios.mostrarDatosinst',['ofertas'=>$ofertas],['examenes'=>$examenes],['instituciones'=>$instituciones[0]]);
+        return view('usuarios.mostrarDatosinst',['instituciones'=>$instituciones[0]],compact('ofertas','examenes'));
     }
     /**
      * Show the form for editing the specified resource.
