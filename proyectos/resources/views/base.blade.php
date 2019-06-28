@@ -12,28 +12,36 @@
     <title>@yield('title')</title>
     <style>
             .row.content {
-                background-color: #f1f8e9;
+                background-color: #ffffff;
                 height: 1000px;
                 width: 100rem
-    
             }
     
             .sidenav {
                 background-color: #212121;
-                height: 100%;
-                box-shadow:5px 5px 2px 0px #757575;
+                height: auto;
+                min-height: 90vh;
+                box-shadow:5px 0px 2px 0px #757575;
+                z-index: 1;
             }
     
+            body::-webkit-scrollbar{
+                width: .5vw;
+                background-color: #c8c8c8;
+            }
+            body::-webkit-scrollbar-thumb{
+                border-radius: 5px;
+                background-color: #212121;
+            }
             @media screen and (max-width: 767px) {
             .sidenav {
                 height: auto;
                 padding: 15px;
-            
+                z-index: 1;
             }
-    
-            .row.content {height: auto;
-            }
-    
+                .row.content {
+                    height: auto;
+                }
             }
             a{
                 color: #212121;
@@ -71,7 +79,11 @@
             .btnAtras:hover{
                 color:#757575;
             }
-        </style>
+            .blqFooter{
+                padding-bottom: 10vh;
+                z-index:4;
+            }
+    </style>
 </head>
 <body>
     <div class="row">
@@ -124,12 +136,27 @@
             </div>
         </div>
     </div>
-    <footer class="">
-        <ol class="breadcrumb">
-            <li><a href="@yield('home')">Inicio</a></li>
-            @yield('migas')
-        </ol>
-        Un&nformativa POR MODIFICAR AÑADIR LA OTRA INFO
+    <footer class="page-footer font-small blue bg-dark text-white pt-4 blqFooter">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-3 mt-md-0 mt-3">
+                    <br>
+                    <br>
+                    <a href="@yield('home')" class="text-white">Inicio -> </a>
+                    @yield('migas')
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <br>
+                    <br>
+                    <h5 class="text-uppercase text-center">Contactanos:</h5>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <p>Facebook: https://www.facebook.com/Unnformativa/</p>
+                    <p>Twitter: https://twitter.com/nformativa</p>
+                    <p>Correo Electrónico: Un&nformativa@gmail.com</p>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="{{ asset('../public/js/app.js') }}"></script>
     <script src="{{ asset('../public/js/app-style-swicher.js') }}"></script>

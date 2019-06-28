@@ -62,7 +62,7 @@
                         </tr>    
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="btn btn-success" required value="Actualizar Categoria" name="btn_modificar_categoria" id="btn_modificar_categoria" style="position: relative; left: 80%">
+                                <input type="submit" class="btn btn-primary" required value="Actualizar Categoria" name="btn_modificar_categoria" id="btn_modificar_categoria" style="position: relative; left: 80%">
                             </td>
                         </tr>
                     </table>

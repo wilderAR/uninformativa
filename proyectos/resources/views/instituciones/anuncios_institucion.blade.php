@@ -156,5 +156,5 @@
     </section>
 @endsection
 @section('migas')
-    <li class="active"><br>Anuncios</li>
+    Anuncios
 @endsection

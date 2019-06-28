@@ -2,6 +2,9 @@
 @section('title')
     Instituciones
 @endsection
+@section('modulo')
+    Instituciones
+@endsection
 @section('usuario')
     Administrador
 @endsection

@@ -12,7 +12,7 @@
     <title>@yield('title')</title>
     <style>
         .row.content {
-            background-color: #f1f8e9;
+            background-color: #ffffff;
             height: 1000px;
             width: 100rem
 
@@ -79,45 +79,49 @@
 </head>
 <body>
     <div class="row">
-        <div class="col">
+        <div class="col-sm-12">
             <nav class="navbar navbar-dark bg-dark">    
                 <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
                 @yield('buscar')
+                <div></div>
+                <span class="navbar-brand mb-0 h1">@yield('modulo')</span>
+                <div></div>
+                <span class="navbar-brand mb-0 h1">@yield('desplegable')</span>
             </nav>
-            
         </div>
     </div>
     <div class="container-fluid">
-            <div class="row content">
-                <div class="col-sm-2 sidenav" >
-                    <nav class="sidebar-nav" style="position: relative; top: 2%">
-                        <ul id="sidebarnav">
-                            <li><table>
-                                </table></li>
-                                <li>&nbsp;</li>
-                                <li>
-                                    <form action="" method="get">
-                                        <table>
-                                            <tr>
-                                                <td><a href="{{url('buscar/instituciones')}}" class="btn btnMenu">Institucion</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                            <td><a href="{{url('usuario')}}" class="btn btnMenu">Inicio</a></td>
-                                            </tr>
-                                        </table>
-                                    </form>
-                                </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-sm-10">
-                      @yield('Contenido')
-                </div>
+        <div class="row content">
+            <div class="col-sm-2 sidenav" >
+                <nav class="sidebar-nav" style="position: relative; top: 2%">
+                    <ul id="sidebarnav">
+                        <li>
+                            <form action="" method="get">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <a href="{{url('usuario')}}" class="btn btnMenu">Inicio</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="{{url('buscar/instituciones')}}" class="btn btnMenu">Instituciones</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-sm-10">
+                @yield('Contenido')
             </div>
         </div>
+    </div>
     <footer>
 
     </footer>

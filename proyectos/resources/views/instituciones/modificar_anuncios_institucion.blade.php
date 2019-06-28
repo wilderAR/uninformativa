@@ -78,7 +78,7 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" value="Modificar Anuncio" class="btn btn-primary" style="position: relative; left: 80%">
+                                <input type="submit" value="Actualizar Anuncio" class="btn btn-primary" style="position: relative; left: 80%">
                             </td>
                         </tr>
                     </table>
