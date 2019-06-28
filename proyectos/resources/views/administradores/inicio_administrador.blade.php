@@ -6,7 +6,7 @@
     {{route('usuarios.index')}}
 @endsection
 @section('opcion1')
-    Usuarios
+    Administradores
 @endsection
 @section('img1')
     {!! asset('imagenes/usuarios.png') !!}
@@ -29,3 +29,5 @@
 @section('img3')
     {!! asset('imagenes/instituciones.jpg') !!}
 @endsection
+
+

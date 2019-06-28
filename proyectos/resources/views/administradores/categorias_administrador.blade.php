@@ -33,7 +33,7 @@
 @endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btnMenu" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i>
         Crear Categoria
     </button>
@@ -82,7 +82,7 @@
     <p>
     <br>
     <section>
-        <table class="table table-bordered">
+        <table class="table table-bordered" style="width: 75%">
             <thead class="thead-dark">
                 <tr>
                     <th class="text-center">#</th>

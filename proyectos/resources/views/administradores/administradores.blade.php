@@ -21,7 +21,7 @@
 @section('cont2')
     <i class="fas fa-users"></i> 
     &nbsp;
-    Administradores
+    USuarios
 @endsection
 @section('url3')
     {{route('institucion.index')}}
@@ -31,9 +31,14 @@
     &nbsp;    
     Instituciones
 @endsection
+@section('cont4')
+   <i class="fas fa-user-tie"></i> 
+    &nbsp;    
+    Administradores
+@endsection
 @section('Contenido')
     <br>
-    <button type="button" class="btn btnMenu" data-toggle="modal" data-target=".bd-example-modal-lg">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-plus"></i>
         Crear Administrador
     </button>         
@@ -49,7 +54,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{url('usuarios')}}" method="POST">
+                    <form action="{{url('CrearAdmin')}}" method="POST">
                         {{csrf_field()}}
                         <table class="table">
                             <tr>

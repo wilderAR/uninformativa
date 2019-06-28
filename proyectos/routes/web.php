@@ -20,6 +20,8 @@
     Route::post('examen/{id}','ExamenesController@disable')->name('examen.estado');
     // usuario
     Route::get('usuario','OfertasController@listar');
+    Route::get('administradores','UsuariosController@listarUsu');
+    Route::post('CrearAdmin','UsuariosController@stores');
     Route::get('oferta/{idoferta}/mostrar','OfertasController@mostraroferta')->name('oferta.mostrar');
     Route::get('buscar/instituciones','institucionesController@list')->name('instituciones.listar');
     Route::get('buscar/instituciones/{idinstitucion}','OfertasController@mostrarDatosIntitucion');
