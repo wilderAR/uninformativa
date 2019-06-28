@@ -76,25 +76,26 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="">Cantidad:</label>
+                                    <label for="">Duración:</label>
                                 </td>
                                 <td>
-                                    <input type="number" class="form-control" name="duracion" id="duracion" style="width: 40%">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label for="">Medida:</label>
-                                </td>
-                                <td>
-                                    <select class="btn btn-primary" name="medida" id="medida">
-                                        <option value="Años">Años</option>
-                                        <option value="Semestres">Semestres</option>
-                                        <option value="Trimestres">Trimestres</option>
-                                        <option value="Meses">Meses</option>
-                                        <option value="Días">Días</option>
-                                        <option value="Horas">Horas</option>
-                                    </select>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <input type="number" class="form-control" name="duracion" id="duracion">
+                                            </td>
+                                            <td>
+                                                <select class="btn btn-primary" name="medida" id="medida">
+                                                    <option value="Años">Años</option>
+                                                    <option value="Semestres">Semestres</option>
+                                                    <option value="Trimestres">Trimestres</option>
+                                                    <option value="Meses">Meses</option>
+                                                    <option value="Días">Días</option>
+                                                    <option value="Horas">Horas</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
@@ -107,7 +108,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2"> 
-                                    <input type="submit" value="Crear Oferta" name="send" id="btn_crear_oferta" class="btn btn-primary" style="position: relative; left: 85%" >
+                                    <input type="submit" value="Crear Oferta" name="send" id="btn_crear_oferta" class="btn btn-primary" style="position: relative; left: 85%">
                                 </td>
                             </tr>
                         </table>
@@ -140,8 +141,7 @@
                     <th class="text-center">#</th>
                     <th class="text-center">Categoria</th>
                     <th class="text-center">Nombre</th>
-                    <th class="text-center">Duracion</th>
-                    <th class="text-center">Medida</th>
+                    <th class="text-center">Duración</th>
                     <th class="text-center">Descripción</th>
                     <th class="text-center">Estado</th>
                     <th class="text-center">Actualizar</th>
@@ -154,8 +154,7 @@
                     <td class="text-center">{{$oferta->idoferta}}</td>
                     <td class="text-center">{{$oferta->nombrec}}</td>
                     <td class="text-center">{{$oferta->nombref}}</td>
-                    <td class="text-center">{{$oferta->duracion}}</td>
-                    <td class="text-center">{{$oferta->medida}}</td>
+                    <td class="text-center">{{$oferta->duracion}} {{$oferta->medida}}</td>
                     <td>{{$oferta->descripcion}}</td>
                     <td class="text-center">
                         @if($oferta->estado==1) 

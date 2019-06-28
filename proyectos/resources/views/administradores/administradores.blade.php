@@ -2,6 +2,9 @@
 @section('title')
     Administrador
 @endsection
+@section('modulo')
+    Administradores
+@endsection
 @section('usuario')
     Administrador
 @endsection
@@ -19,9 +22,9 @@
     {{route('usuarios.index')}}
 @endsection
 @section('cont2')
-    <i class="fas fa-users"></i> 
-    &nbsp;
-    USuarios
+   <i class="fas fa-user-tie"></i> 
+    &nbsp;    
+    Administradores
 @endsection
 @section('url3')
     {{route('institucion.index')}}

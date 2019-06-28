@@ -12,7 +12,7 @@
     <title>@yield('title')</title>
     <style>
             .row.content {
-                background-color: #f1f8e9;
+                background-color: #ffffff;
                 height: 1000px;
                 width: 100rem
     

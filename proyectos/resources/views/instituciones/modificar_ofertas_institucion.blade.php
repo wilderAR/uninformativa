@@ -49,7 +49,7 @@
                                 <label for="">Categoria:</label>
                             </td>
                             <td>
-                                <select name="idcategoria" id="idcategoria" class="btn btn-success">
+                                <select name="idcategoria" id="idcategoria" class="btn btn-primary">
                                     <option value="0">Selecciones una Categoria</option>
                                     @foreach ($categorias as $categoria)
                                         <option value="{{$categoria->idcategoria}}">{{$categoria->nombrec}}</option>
@@ -62,23 +62,24 @@
                                 <label for="">Duración:</label>
                             </td>
                             <td>
-                                <input type="number" name="duracion" id="duracion" class="form-control" value="{{$ofertas->duracion}}">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <input type="number" name="duracion" id="duracion" class="form-control" value="{{$ofertas->duracion}}">
+                                        </td>
+                                        <td> 
+                                            <select name="medida" id="medida" class="btn btn-primary">
+                                                <option value="Años">Años</option>
+                                                <option value="Semestre">Semestres</option>
+                                                <option value="Trimestre">Trimestres</option>
+                                                <option value="Meses">Meses</option>
+                                                <option value="Dias">Días</option>
+                                                <option value="Hora">Horas</option>
+                                            </select>    
+                                        </td>
+                                    </tr>
+                                </table>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="">Seleccione Nueva Opción</label>
-                            </td>
-                            <td> 
-                                <select name="medida" id="medida" class="btn btn-success">
-                                    <option value="Años">Años</option>
-                                    <option value="Semestre">Semestres</option>
-                                    <option value="Trimestre">Trimestres</option>
-                                    <option value="Meses">Meses</option>
-                                    <option value="Dias">Días</option>
-                                    <option value="Hora">Horas</option>
-                                </select>    
-                            </td>   
                         </tr>
                         <tr>
                             <td>
@@ -106,7 +107,7 @@
                         </tr>
                         <tr>
                             <td style="position: relative; left: 60%">
-                                <input type="submit" value="Modificar Oferta" name="btn_modificar_oferta" id="btn_modificar_oferta" class="btn btn-primary" style="position: relative; left: 90%;">
+                                <input type="submit" value="Actualizar Oferta" name="btn_modificar_oferta" id="btn_modificar_oferta" class="btn btn-primary" style="position: relative; left: 90%;">
                             </td>
                         </tr>
                     </table>

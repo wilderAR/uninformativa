@@ -2,6 +2,9 @@
 @section('title')
     Categorias
 @endsection
+@section('modulo')
+    Categorias
+@endsection
 @section('usuario')
     Administrador
 @endsection
