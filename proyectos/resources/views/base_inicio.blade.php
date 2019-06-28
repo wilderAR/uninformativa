@@ -96,7 +96,7 @@
                             <h2>@yield('opcion1')</h2>
                         </label>   
                         <a href="@yield('ruta1')" class="card-body center-block" style="display:block;margin:auto;">
-                            <img src="@yield('img1')" alt="" class="img-fluid" style=" border-radius: 50%">
+                            <img src="@yield('img1')" alt="" class="img-fluid" style=" border-radius: 50%; width: 40vw">
                         </a> 
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                                 <h2>@yield('opcion2')</h2>
                             </label>   
                             <a href="@yield('ruta2')" class="card-body center-block" style="display:block;margin:auto;">
-                                <img src="@yield('img2')" alt="" class="img-fluid" style=" border-radius: 50%;">
+                                <img src="@yield('img2')" alt="" class="img-fluid" style=" border-radius: 50%; width: 40vw">
                             </a> 
                         </div>  
                 </div>
@@ -117,7 +117,7 @@
                                 <h2>@yield('opcion3')</h2>
                             </label>   
                             <a href="@yield('ruta3')" class="card-body center-block" style="display:block;margin:auto;">
-                                <img src="@yield('img3')" alt="" class="img-fluid" style=" border-radius: 50%">
+                                <img src="@yield('img3')" alt="" class="img-fluid" style=" border-radius: 50%; width: 40vw">
                             </a>    
                         </div>  
                     </div>
