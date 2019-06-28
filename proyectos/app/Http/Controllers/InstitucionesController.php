@@ -11,13 +11,18 @@ class InstitucionesController extends Controller
 {
     public function index()
     {
+        $usuarios = DB::table('usuario')
+        ->join('tipo_usuario','idtipo_usuario','=','usuario.tipo_usuario')
+        ->select('usuario.usuario','usuario.idusuario')->where('usuario.estado','=',1)->where('usuario.tipo_usuario','=',2)
+        ->get();
         $instituciones=DB::table('usuario')
         ->select('usuario.idusuario','usuario.usuario','usuario.contraseña','usuario.estado','usuario.correo')->where('usuario.tipo_usuario','=',2)
         ->get();
-        return view('administradores.instituciones_administrador',['instituciones'=>$instituciones]);
+        return view('administradores.instituciones_administrador',['instituciones'=>$instituciones],['usuarios'=>$usuarios]);
     }
    
     public function list(){
+        
         $instituciones = DB::table('institucion')
         ->select('institucion.idinstitucion','institucion.pagina','institucion.nombrei')
         ->get();
@@ -51,6 +56,15 @@ class InstitucionesController extends Controller
             return "fatal Error -".$e->getMessage();
 
         }
+    }
+    public function Datos(Request $request){
+        $instituciones = new instituciones;
+        $instituciones->nombrei = $request->nombrei;
+        $instituciones->pagina = $request->pagina;
+        $instituciones->idusuario = $request->usuario;
+        $instituciones->idinstitucion = $request->usuario;
+        $instituciones ->save();
+        return redirect('institucion');
     }
     /**
      * Show the form for editing the specified resource.

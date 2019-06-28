@@ -95,6 +95,61 @@
             </div>
         </div>
     </div>
+    <button type="button" class="btn btnMenu" data-toggle="modal" data-target=".bd-example">
+            <i class="fas fa-plus"></i>
+            Agregar Datos Institucionales
+        </button>         
+        <div class="modal fade bd-example" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" style="position: relative; left: 40%">
+                            <label for="">Datos Institucionales</label>
+                        </h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{url('datos')}}" method="POST">
+                            {{csrf_field()}}
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <label for="">Nombre Institucional:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="nombrei" id="nombrei" required class="form-control">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="">pagina:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" required name="pagina" id="pagina" class="form-control">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="">Usuarios:</label></td>
+                                    <td><select name="usuario" id="usuario" class="btn btn-primary" required>
+                                        <option value="0">Seleccione Usuario Institucion</option>
+                                        @foreach ($usuarios as $usuario)
+                                        <option value="{{$usuario->idusuario}}">{{$usuario->usuario}}</option> 
+                                        @endforeach
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                        <td style="position: relative; left: 80%">
+                                            <input type="submit" value="Guardar Datos" name="btn_crear_usuario" id="btn_crear_usuario" class="btn btn-primary">
+                                        </td>
+                                </tr>
+                            </table>
+                        </form>     
+                    </div>
+                </div>
+            </div>
+        </div>
     <p>
     <br>
     <section>

@@ -25,3 +25,4 @@
     Route::get('oferta/{idoferta}/mostrar','OfertasController@mostraroferta')->name('oferta.mostrar');
     Route::get('buscar/instituciones','institucionesController@list')->name('instituciones.listar');
     Route::get('buscar/instituciones/{idinstitucion}','OfertasController@mostrarDatosIntitucion');
+    Route::post('datos','institucionesController@Datos');
