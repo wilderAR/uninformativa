@@ -22,10 +22,7 @@ class AnunciosController extends Controller
     }
     //funcion para listar los anuncios
     public function list(){
-        $anuncios = DB::table('anuncio')
-        ->join('institucion','institucion.idinstitucion','=','anuncio.idinstitucion')
-        ->select('institucion.nombrei','anuncio.fecha','anuncio.imagen','anuncio.descripcion')->where('anuncio.estado','=','1')
-        ->get();
+       
          //asi se retornara para mostrar en las vistas
          return view('Usuarios.inicio_usuario',['anuncios' => $anuncios]);
     }

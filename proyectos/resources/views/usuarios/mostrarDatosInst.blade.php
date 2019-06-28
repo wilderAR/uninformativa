@@ -6,10 +6,11 @@
 
 <section>
 
-        <label for="" class="h2">{{$instituciones->nombrei}}</label>
-        {{$instituciones->pagina}}
-</section>
+        <label for="" class="h2"><strong>{{$instituciones->nombrei}}</strong></label><br>
+        <label for="" class="h3"><strong>Pagina Web Institucional: &nbsp;</strong> </label><label for="" class="h4"> {{$instituciones->pagina}}</label>
 
+</section>
+<br>
 <section>
         <table class="table table-bordered" style="width: 60%">
                 <thead class="thead-dark">

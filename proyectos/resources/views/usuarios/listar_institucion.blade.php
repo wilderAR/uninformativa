@@ -2,6 +2,9 @@
 @section('title')
     Instituciones
 @endsection
+@section('regresar')
+    
+@endsection
 @section('Contenido')
 <div class="container-fluid">
   @foreach ($instituciones as $institucion)

@@ -62,7 +62,8 @@
         /*Carta Universidades*/
         .cardUni{
             width:30vw;
-            margin-left:36vw;
+            margin-left:25vw;
+            margin-top: 5vw;
         }
         /*Boton Flecha Atras*/
         .btnAtras{
@@ -71,12 +72,15 @@
         .btnAtras:hover{
             color:#757575;
         }
+        .table{
+            width: 75%;
+        }
     </style>
 </head>
 <body>
     <div class="row">
         <div class="col">
-            <nav class="navbar navbar-dark bg-dark">
+            <nav class="navbar navbar-dark bg-dark">    
                 <span class="navbar-brand mb-0 h1">UN&NFORMATIVA</span>
                 @yield('buscar')
             </nav>
@@ -89,27 +93,11 @@
                     <nav class="sidebar-nav" style="position: relative; top: 2%">
                         <ul id="sidebarnav">
                             <li><table>
-                                    <tr>
-                                        <td>
-                                            <input type="text" class="input-group-text" id="busqueda" placeholder="Buscar Oferta">
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-secondary btn-lg" type="submit">
-                                                <i class="fas fa-search"></i>
-                                            </button>
-                                        </td>
-                                    </tr>
                                 </table></li>
                                 <li>&nbsp;</li>
                                 <li>
                                     <form action="" method="get">
                                         <table>
-                                            <tr>
-                                                <td><input type="submit" value="Categoria" class="btn btnMenu"></td>
-                                            </tr>
-                                            <tr>
-                                                <td>&nbsp;</td>
-                                            </tr>
                                             <tr>
                                                 <td><a href="{{url('buscar/instituciones')}}" class="btn btnMenu">Institucion</a></td>
                                             </tr>
@@ -117,7 +105,7 @@
                                                 <td>&nbsp;</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="submit" value="Duracion" class="btn btnMenu"></td>
+                                            <td><a href="{{url('usuario')}}" class="btn btnMenu">Inicio</a></td>
                                             </tr>
                                         </table>
                                     </form>

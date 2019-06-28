@@ -32,11 +32,12 @@ class OfertasController extends Controller
         }    
     }
 
+
     public function listar(){
         $categorias=DB::table('categoria')
             ->select('nombrec','idcategoria')
             ->get();
-        $institucion=DB::table('institucion')
+        $instituciones=DB::table('institucion')
             ->select('nombrei','idinstitucion')
             ->get();
         $ofertas = DB::table('oferta')
@@ -44,7 +45,11 @@ class OfertasController extends Controller
         ->join('categoria','categoria.idcategoria','=','oferta.idcategoria')
         ->select('categoria.nombrec','institucion.nombrei','oferta.nombref','oferta.idoferta','oferta.descripcion','oferta.medida','oferta.duracion','oferta.estado')
         ->get();
-        return view('usuarios.buscar_oferta_usuario',['ofertas'=>$ofertas],['categorias'=>$categorias],['instituciones'=>$institucion]);
+        $anuncios = DB::table('anuncio')
+        ->join('institucion','institucion.idinstitucion','=','anuncio.idinstitucion')
+        ->select('institucion.nombrei','anuncio.fecha','anuncio.imagen','anuncio.descripcion')->where('anuncio.estado','=','1')
+        ->get();
+        return view('usuarios.inicio_usuario',compact('categorias','instituciones','ofertas','anuncios'));
     }
 
     /**
