@@ -156,5 +156,5 @@
     </section>
 @endsection
 @section('migas')
-    <li class="active"><br>Administradores</li>
+    <p class="active"><br>Administradores
 @endsection

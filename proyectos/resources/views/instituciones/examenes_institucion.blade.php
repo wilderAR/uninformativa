@@ -145,5 +145,5 @@
     </section>
 @endsection
 @section('migas')
-    <li class="active"><br>Examenes</li>
+    -> Examenes
 @endsection

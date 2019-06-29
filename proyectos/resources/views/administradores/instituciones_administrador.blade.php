@@ -206,5 +206,5 @@
     </section>
 @endsection
 @section('migas')
-    <li class="active"><br>Instituciones</li>
+    -> Instituciones
 @endsection

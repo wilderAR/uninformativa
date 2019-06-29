@@ -2,6 +2,9 @@
 @section('title')
     Administrador
 @endsection
+@section('modulo')
+    Administradores
+@endsection
 @section('usuario')
     Administrador
 @endsection
@@ -148,5 +151,5 @@
     </section>
 @endsection
 @section('migas')
-    <li class="active"><br>Administradores</li>
+    -> Administradores
 @endsection

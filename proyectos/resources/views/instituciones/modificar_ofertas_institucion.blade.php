@@ -117,8 +117,6 @@
     </div>
 @endsection
 @section('migas')
-    <li>
-        <a href="{{route('oferta.index')}}"><br>Ofertas</a>
-    </li>
-<li class="active"><br><br>Actualizar Ofertas</li>
+    <a href="{{route('oferta.index')}}">Ofertas</a>
+    -> Actualizar Ofertas
 @endsection

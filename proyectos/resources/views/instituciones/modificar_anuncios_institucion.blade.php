@@ -88,8 +88,6 @@
     </div>
 @endsection
 @section('migas')
-    <li>
-        <a href="{{route('anuncio.index')}}"><br>Anuncios</a>
-    </li>
-    <li class="active"><br><br>Actualizar Anuncios</li>
+    <a href="{{route('anuncio.index')}}">-> Anuncios</a>
+    -> Actualizar Anuncios
 @endsection

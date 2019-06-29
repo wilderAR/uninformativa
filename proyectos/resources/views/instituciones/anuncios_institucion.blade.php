@@ -156,5 +156,5 @@
     </section>
 @endsection
 @section('migas')
-    Anuncios
+    -> Anuncios
 @endsection

@@ -141,5 +141,5 @@
     </section>
 @endsection
 @section('migas')
-    <li class="active"><br>Categorias</li>
+    -> Categorias
 @endsection

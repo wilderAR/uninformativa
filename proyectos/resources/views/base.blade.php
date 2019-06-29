@@ -13,14 +13,14 @@
     <style>
             .row.content {
                 background-color: #ffffff;
-                height: 1000px;
+                height: auto;
                 width: 100rem
             }
     
             .sidenav {
                 background-color: #212121;
                 height: auto;
-                min-height: 90vh;
+                min-height: 500px;
                 box-shadow:5px 0px 2px 0px #757575;
                 z-index: 1;
             }
@@ -80,7 +80,7 @@
                 color:#757575;
             }
             .blqFooter{
-                padding-bottom: 10vh;
+                padding-bottom: .5vh;
                 z-index:4;
             }
     </style>
@@ -142,7 +142,7 @@
                 <div class="col-md-3 mt-md-0 mt-3">
                     <br>
                     <br>
-                    <a href="@yield('home')" class="text-white">Inicio -> </a>
+                    <a href="@yield('home')" class="text-white">Inicio</a>
                     @yield('migas')
                 </div>
                 <div class="col-md-3 mb-md-0 mb-3">

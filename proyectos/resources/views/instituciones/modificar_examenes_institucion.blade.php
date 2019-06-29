@@ -72,8 +72,6 @@
     </div>   
 @endsection
 @section('migas')
-    <li>
-        <a href="{{route('examen.index')}}"><br>Examenes</a>
-    </li>
-    <li class="active"><br><br>Actualizar Examenes</li>
+    <a href="{{route('examen.index')}}">Examenes</a>
+    -> Actualizar Examenes
 @endsection
